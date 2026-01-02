@@ -1,0 +1,82 @@
+/* Scroll bar */
+::-webkit-scrollbar {
+    width: 2px; /* Độ rộng ngang của thanh cuộn */
+    height: 2px; /* Độ rộng của dọc thanh cuộn */
+    background-color: #ffffff; /* Màu nền của thanh cuộn */
+  }
+  
+  /* Tùy chỉnh slider của thanh cuộn */
+  ::-webkit-scrollbar-thumb {
+    background-color: #4d7939; /* Màu của slider */
+    border-radius: 2px; /* Bo góc cho slider */
+  }
+
+  /* Input Range */
+  /* CSS cho thanh kéo */
+  input[type="range"]::-webkit-slider-runnable-track {
+    height: 4px;
+    background-color: #FFF5E0;
+    /* Màu của thanh kéo */
+    border-radius: 4px;
+  }
+
+  input[type="range"]::-moz-range-track {
+    height: 4px;
+    background-color: #FFF5E0;
+    /* Màu của thanh kéo */
+    border-radius: 4px;
+  }
+
+  input[type="range"]::-ms-track {
+    height: 4px;
+    background-color: #FFF5E0;
+    /* Màu của thanh kéo */
+    border-radius: 4px;
+  }
+
+  /* CSS cho con trỏ (thumb) */
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    scale: 1.2;
+    background-color: #FFF5E0;
+    /* Màu của con trỏ */
+    border: 2px solid #4d7939;
+    /* Viền màu của con trỏ */
+    border-radius: 50%;
+    /* Con trỏ hình tròn */
+    cursor: pointer;
+    margin-top: -5px;
+    /* Điều chỉnh vị trí con trỏ so với thanh kéo */
+  }
+
+  input[type="range"]::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background-color: #ffffff;
+    border: 2px solid #D2B68A;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  input[type="range"]::-ms-thumb {
+    width: 25px;
+    height: 25px;
+    background-color: #ffffff;
+    border: 2px solid #D2B68A;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  /*  */
+
+  * {
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; 
+  }
+
+  body {
+    background: #faffee;
+  }

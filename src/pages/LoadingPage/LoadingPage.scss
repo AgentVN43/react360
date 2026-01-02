@@ -1,0 +1,150 @@
+.LoadingPage_wrapper {
+    background-image: url(../../assets/images/bg_loading.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+      
+      .progress-loader {
+        background: rgba(255, 255, 255, 0.2);
+      }
+      
+      .progress {
+        content: "";
+        width: 1px;
+        height: 5px;
+        border-radius: 7px;
+        background: linear-gradient(to right, #67451A 0%, #97702C 50%, #97702C 100%);
+        transition: 0.5s;
+        animation: loading1274 5s ease infinite;
+      }
+      
+      @keyframes loading1274 {
+        0% {
+          width: 0%;
+        }
+      
+        10% {
+          width: 10%;
+        }
+      
+        50% {
+          width: 40%;
+        }
+      
+        60% {
+          width: 60%;
+        }
+      
+        100% {
+          width: 100%;
+        }
+      }
+
+      // Loader
+      
+      .spinner {
+        width: 70px;
+        height: 70px;
+        position: relative;
+        animation: rotation 1s linear infinite;
+        border-radius: 100em;
+      }
+      
+      .path {
+        stroke-dasharray: 100;
+        stroke-dashoffset: 20;
+        stroke-linecap: round;
+      }
+      
+      @keyframes rotation {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      
+}
+
+@media screen and (max-width: 768px) {
+  .LoadingPage_wrapper {
+    background-image: url(../../assets/images/bg_loading.png);
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+
+// loading
+/* From Uiverse.io by G4b413l */ 
+.newtons-cradle {
+  --uib-size: 50px;
+  --uib-speed: 1.2s;
+  --uib-color: #4D7E37;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--uib-size);
+  height: var(--uib-size);
+ }
+ 
+ .newtons-cradle__dot {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 25%;
+  transform-origin: center top;
+ }
+ 
+ .newtons-cradle__dot::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 25%;
+  border-radius: 50%;
+  background-color: var(--uib-color);
+ }
+ 
+ .newtons-cradle__dot:first-child {
+  animation: swing var(--uib-speed) linear infinite;
+ }
+ 
+ .newtons-cradle__dot:last-child {
+  animation: swing2 var(--uib-speed) linear infinite;
+ }
+ 
+ @keyframes swing {
+  0% {
+   transform: rotate(0deg);
+   animation-timing-function: ease-out;
+  }
+ 
+  25% {
+   transform: rotate(70deg);
+   animation-timing-function: ease-in;
+  }
+ 
+  50% {
+   transform: rotate(0deg);
+   animation-timing-function: linear;
+  }
+ }
+ 
+ @keyframes swing2 {
+  0% {
+   transform: rotate(0deg);
+   animation-timing-function: linear;
+  }
+ 
+  50% {
+   transform: rotate(0deg);
+   animation-timing-function: ease-out;
+  }
+ 
+  75% {
+   transform: rotate(-70deg);
+   animation-timing-function: ease-in;
+  }
+ }
+ 
