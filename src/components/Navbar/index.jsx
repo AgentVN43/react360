@@ -41,12 +41,12 @@ const navList = [
   },
   {
     id: 6,
-    label: <FormattedMessage id="nav.5" defaultMessage="Layout Điển Hình" />,
+    label: <FormattedMessage id="nav.6" defaultMessage="Layout Điển Hình" />,
     href: "/layout-dien-hinh",
   },
   {
     id: 7,
-    label: <FormattedMessage id="nav.6" defaultMessage="Nội Thất Căn Hộ" />,
+    label: <FormattedMessage id="nav.7" defaultMessage="Nội Thất Căn Hộ" />,
     href: "/house/1pn",
   },
 ];
@@ -117,71 +117,63 @@ const Navbar = () => {
   ];
 
   return (
-    // <section
-    //   className="fixed top-4 left-2 md:left-4 w-48 md:w-52 h-auto
-    // bg-white/60 backdrop-blur-md border border-white/10 shadow-lg
-    // rounded-md p-2 space-y-2 z-50"
-    // >
-    //   {/* Logo */}
-    //   <div className="flex p-1 md:p-0 items-center">
-    //     <div className="md:h-20 md:p-3 w-full flex justify-center items-center">
-    //       <img
-    //         src={nav_logo}
-    //         alt="nav_logo"
-    //         className="w-[50%] md:w-2/3 object-contain"
-    //       />
-    //     </div>
-    //     <button
-    //       className={`md:hidden w-10 h-8 bg-sub
-    //       flex justify-center items-center rounded-md`}
-    //       onClick={() => setisMobileNav(!isMobileNav)}
-    //     >
-    //       {isMobileNav ? (
-    //         <CaretUpOutlined className="text-primary" />
-    //       ) : (
-    //         <CaretDownOutlined className="text-primary" />
-    //       )}
-    //     </button>
-    //   </div>
+    <section
+      className="fixed top-4 left-2 md:left-4 w-48 md:w-52 h-auto
+    bg-white/60 backdrop-blur-md border border-white/10 shadow-lg
+    rounded-md p-2 space-y-2 z-50"
+    >
+      {/* Logo */}
+      <div className="flex p-1 md:p-0 items-center">
+        <div className="md:h-20 md:p-3 w-full flex justify-center items-center">
+          <img
+            src={nav_logo}
+            alt="nav_logo"
+            className="w-[50%] md:w-2/3 object-contain"
+          />
+        </div>
+        <button
+          className={`md:hidden w-10 h-8 bg-sub
+          flex justify-center items-center rounded-md`}
+          onClick={() => setisMobileNav(!isMobileNav)}
+        >
+          {isMobileNav ? (
+            <CaretUpOutlined className="text-primary" />
+          ) : (
+            <CaretDownOutlined className="text-primary" />
+          )}
+        </button>
+      </div>
 
-    //   <div className={`transition-all duration-500 `}>
-    //     {!isMobileNav && (
-    //       <div className="w-full h-8 px-3 flex justify-start items-center rounded-md bg-primary text-sub">
-    //         <p className="text-xs font-semibold">
-    //           {navList.find((item) => item.id === activeMenu).label}
-    //         </p>
-    //       </div>
-    //     )}
-    //     <ul className={`space-y-1 ${isMobileNav ? "block" : "hidden"}`}>
-    //       {navList.map((item, index) => (
-    //         <li key={index}>
-    //           <Link
-    //             className={`w-full h-8 px-3 flex justify-start items-center rounded-md
-    //               hover:bg-primary hover:text-sub ${
-    //                 activeMenu === item.id
-    //                   ? "bg-primary text-sub"
-    //                   : "bg-sub text-white"
-    //               }`}
-    //             onClick={() => {
-    //               handleActiveNav(item);
-    //               isMobile && setisMobileNav(false);
-    //             }}
-    //             to={item.href}
-    //           >
-    //             <p className="text-xs font-semibold">{item.label}</p>
-    //           </Link>
-    //         </li>
-    //       ))}
-    //     </ul>
-    //     {/* <div
-    //       className="flex md:hidden justify-center items-center bg-primary px-10 rounded-md mt-2
-    //       text-sub w-full py-1"
-    //       onClick={() => setisMobileNav(!isMobileNav)}
-    //     >
-    //       {isMobileNav ? <CaretUpOutlined /> : <CaretDownOutlined />}
-    //     </div> */}
-    //   </div>
-    // </section>
+      <div className={`transition-all duration-500 `}>
+        {!isMobileNav && (
+          <div className="w-full h-8 px-3 flex justify-start items-center rounded-md bg-(--primary) text-(--sub)">
+            <p className="text-xs font-semibold">
+              {navList.find((item) => item.id === activeMenu).label}
+            </p>
+          </div>
+        )}
+        <ul className={`space-y-1 ${isMobileNav ? "block" : "hidden"}`}>
+          {navList.map((item, index) => (
+            <li key={index}>
+              <Link
+                className={`w-full h-8 px-3 flex justify-start items-center rounded-md
+                  hover:bg-(--primary) hover:text-(--sub) ${activeMenu === item.id
+                    ? "bg-(--primary) text-(--sub)"
+                    : "bg-(--sub) text-white"
+                  }`}
+                onClick={() => {
+                  handleActiveNav(item);
+                  isMobile && setisMobileNav(false);
+                }}
+                to={item.href}
+              >
+                <p className="text-xs font-semibold">{item.label}</p>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
     // <section
     //   className="fixed top-6 left-6 z-50
     //     w-64 md:w-72
@@ -229,9 +221,8 @@ const Navbar = () => {
 
     //     {/* Danh sách chính - space-y-3 tạo MARGIN giữa các Item */}
     //     <ul
-    //       className={`space-y-3 transition-all ${
-    //         isMobileNav ? "block" : "hidden md:block"
-    //       }`}
+    //       className={`space-y-3 transition-all ${isMobileNav ? "block" : "hidden md:block"
+    //         }`}
     //     >
     //       {navList.map((item, index) => {
     //         const isActive = activeMenu === item.id;
@@ -254,10 +245,9 @@ const Navbar = () => {
     //                 /* Hiệu ứng & Màu sắc */
     //                 transition-all duration-300 transform
 
-    //                 ${
-    //                   isActive
-    //                     ? "bg-[#d4fc79] text-[#2d4a1e] shadow-lg shadow-green-200/50 scale-[1.03] translate-x-1"
-    //                     : "bg-[#5a7a44] text-white hover:bg-[#6d8c52] hover:translate-x-2"
+    //                 ${isActive
+    //                   ? "bg-[#d4fc79] text-[#2d4a1e] shadow-lg shadow-green-200/50 scale-[1.03] translate-x-1"
+    //                   : "bg-[#5a7a44] text-white hover:bg-[#6d8c52] hover:translate-x-2"
     //                 }
     //               `}
     //             >
@@ -279,7 +269,7 @@ const Navbar = () => {
     //   )}
     // </section>
 
-    <div className="fixed top-8 left-8 h-[calc(100vh-48px)] z-50 bg-white">test</div>
+    // <div className="fixed top-8 left-8 h-[calc(100vh-48px)] z-50 bg-white">test</div>
   );
 };
 

@@ -49,18 +49,17 @@ const OverviewFilter = ({
     >
       {isVisibleFilter && (
         <div className="text-center">
-          <h2 className="mb-2 text-sm font-bold text-sub hidden md:inline-block">
+          <h2 className="mb-2 text-sm font-bold text-(--sub) hidden md:inline-block">
             VIEW TÒA NHÀ
           </h2>
           <ul className={`grid grid-cols-4 gap-2 md:gap-1 md:grid-cols-1`}>
             {tabs.map((section, index) => (
               <li
                 key={index}
-                className={`w-full h-8 px-2 hover:bg-primary hover:text-sub text-center text-xs flex justify-center items-center rounded-md hover:cursor-pointer ${
-                  activeFilterNumber === section.id
-                    ? "bg-primary text-sub font-semibold"
-                    : "bg-sub text-white"
-                }`}
+                className={`w-full h-8 px-2 hover:bg-(--primary) hover:text-(--sub) text-center text-xs flex justify-center items-center rounded-md hover:cursor-pointer ${activeFilterNumber === section.id
+                  ? "bg-(--primary) text-(--sub) font-semibold"
+                  : "bg-(--sub) text-white"
+                  }`}
                 onClick={() => handleActiveFilterItemNumber(section)}
               >
                 {section.label}
@@ -74,7 +73,7 @@ const OverviewFilter = ({
       )}
 
       <div
-        className="hidden md:block bg-primary px-10 rounded-md mt-2 text-sub w-max mx-auto hover:cursor-pointer"
+        className="hidden md:block bg-(--primary) px-10 rounded-md mt-2 text-(--sub) w-max mx-auto hover:cursor-pointer"
         onClick={() => setIsVisibleFilter(!isVisibleFilter)}
       >
         {isVisibleFilter ? <CaretUpOutlined /> : <CaretDownOutlined />}
@@ -102,11 +101,10 @@ const OverviewFilterMobile = ({
         {tabs.map((section, index) => (
           <li
             key={index}
-            className={`w-full h-8 px-4 text-nowrap hover:bg-primary hover:text-sub text-center text-xs flex justify-center items-center rounded-md hover:cursor-pointer ${
-              activeFilterNumber === section.id
-                ? "bg-primary text-sub font-semibold"
-                : "bg-sub text-white"
-            }`}
+            className={`w-full h-8 px-4 text-nowrap hover:bg-(--primary) hover:text-(--sub) text-center text-xs flex justify-center items-center rounded-md hover:cursor-pointer ${activeFilterNumber === section.id
+              ? "bg-(--primary) text-(--sub) font-semibold"
+              : "bg-(--sub) text-white"
+              }`}
             onClick={() => handleActiveFilterItemNumber(section)}
           >
             {section.label}

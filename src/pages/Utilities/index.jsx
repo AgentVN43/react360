@@ -108,23 +108,23 @@ const Rotation = ({
       const id = setInterval(() => {
         previousNextFrame === 2
           ? setFrameIndex((prevFrameIndex) => {
-              const nextFrame = (prevFrameIndex % TOTAL_FRAMES) + 1;
-              if (STOP_FRAMES.includes(nextFrame)) {
-                setIsAutoRotatePreviousNextFrame(false); // Stop auto-rotate if nextFrame matches any stop frame
-                return nextFrame; // Keep the frame unchanged
-              }
-              return nextFrame;
-            })
+            const nextFrame = (prevFrameIndex % TOTAL_FRAMES) + 1;
+            if (STOP_FRAMES.includes(nextFrame)) {
+              setIsAutoRotatePreviousNextFrame(false); // Stop auto-rotate if nextFrame matches any stop frame
+              return nextFrame; // Keep the frame unchanged
+            }
+            return nextFrame;
+          })
           : setFrameIndex((prevFrameIndex) => {
-              const nextFrame =
-                prevFrameIndex - 1 <= 0 ? TOTAL_FRAMES : prevFrameIndex - 1;
-              if (STOP_FRAMES.includes(nextFrame)) {
-                setIsAutoRotatePreviousNextFrame(false); // Stop auto-rotate if nextFrame matches any stop frame
-                return nextFrame; // Keep the frame unchanged
-              }
+            const nextFrame =
+              prevFrameIndex - 1 <= 0 ? TOTAL_FRAMES : prevFrameIndex - 1;
+            if (STOP_FRAMES.includes(nextFrame)) {
+              setIsAutoRotatePreviousNextFrame(false); // Stop auto-rotate if nextFrame matches any stop frame
+              return nextFrame; // Keep the frame unchanged
+            }
 
-              return nextFrame;
-            });
+            return nextFrame;
+          });
       }, 100); // Adjust the auto-rotate speed
 
       setIntervalId(id);
@@ -297,14 +297,14 @@ const Rotation = ({
       // });
       !isMobile
         ? setDivStyle({
-            // top: `${e.clientY - 150}px`,
-            top: `25%`,
-            left: `${e.clientX + 80}px`, // Adjust the position to your liking
-          })
+          // top: `${e.clientY - 150}px`,
+          top: `25%`,
+          left: `${e.clientX + 80}px`, // Adjust the position to your liking
+        })
         : setDivStyle({
-            top: `5%`,
-            left: `30%`, // Adjust the position to your liking
-          });
+          top: `5%`,
+          left: `30%`, // Adjust the position to your liking
+        });
     };
 
     const handleMouseLeave = () => {
@@ -322,14 +322,14 @@ const Rotation = ({
       // });
       !isMobile
         ? setDivStyle({
-            // top: `${e.clientY - 150}px`,
-            top: `25%`,
-            left: `${e.clientX + 80}px`, // Adjust the position to your liking
-          })
+          // top: `${e.clientY - 150}px`,
+          top: `25%`,
+          left: `${e.clientX + 80}px`, // Adjust the position to your liking
+        })
         : setDivStyle({
-            top: `5%`,
-            left: `30%`, // Adjust the position to your liking
-          });
+          top: `5%`,
+          left: `30%`, // Adjust the position to your liking
+        });
     };
 
     const handleMouseLeaveUtil = () => {
@@ -491,7 +491,7 @@ const Rotation = ({
                       handleMouseEnterUtil(4, e);
                     }}
                     onMouseLeave={() => handleMouseLeaveUtil()}
-                    className="fill-sub opacity-0 hover:opacity-100 cursor-pointer stroke-white stroke-2"
+                    className="fill-(--sub) opacity-0 hover:opacity-100 cursor-pointer stroke-white stroke-2"
                     d="M864.5 260L792.5 284V245.5L864.5 219L926.5 252L1000 227V188.5V143L1112 99.5L1284.5 245V288.5L1112 146L1000 188.5V227V262.5L926.5 287L864.5 260Z"
                   />
                   {/* 20 */}
@@ -516,12 +516,12 @@ const Rotation = ({
                       handleMouseEnterUtil(3, e);
                     }}
                     onMouseLeave={() => handleMouseLeaveUtil()}
-                    className="fill-sub opacity-0 hover:opacity-100 cursor-pointer stroke-white stroke-2"
+                    className="fill-(--sub) opacity-0 hover:opacity-100 cursor-pointer stroke-white stroke-2"
                     d="M865 610.5L793 612.5V584.5L865 580L928.5 584.5L1001 581V566L1111.5 558.5L1284 585.5V613L1111.5 597L1001 602V610L928.5 612.5L865 610.5Z"
                   />
                   {/* tang 3 */}
                   <g
-                    className="fill-sub opacity-0 hover:opacity-100 cursor-pointer stroke-white stroke-2"
+                    className="fill-(--sub) opacity-0 hover:opacity-100 cursor-pointer stroke-white stroke-2"
                     onPointerDown={(e) => {
                       pointerDownRef.current = { x: e.clientX, y: e.clientY };
                       hasDraggedRef.current = false;
@@ -548,7 +548,7 @@ const Rotation = ({
 
                   {/* tang 1 */}
                   <g
-                    className="fill-sub opacity-0 hover:opacity-100 cursor-pointer stroke-white stroke-2"
+                    className="fill-(--sub) opacity-0 hover:opacity-100 cursor-pointer stroke-white stroke-2"
                     onPointerDown={(e) => {
                       pointerDownRef.current = { x: e.clientX, y: e.clientY };
                       hasDraggedRef.current = false;
@@ -576,7 +576,7 @@ const Rotation = ({
 
                   {/* tang tret */}
                   <g
-                    className="fill-sub opacity-0 hover:opacity-100 cursor-pointer stroke-white stroke-2"
+                    className="fill-(--sub) opacity-0 hover:opacity-100 cursor-pointer stroke-white stroke-2"
                     onPointerDown={(e) => {
                       pointerDownRef.current = { x: e.clientX, y: e.clientY };
                       hasDraggedRef.current = false;
@@ -732,7 +732,7 @@ const Rotation = ({
                       handleMouseEnterUtil(4, e);
                     }}
                     onMouseLeave={() => handleMouseLeaveUtil()}
-                    className="fill-sub opacity-0 hover:opacity-100 cursor-pointer stroke-white stroke-2"
+                    className="fill-(--sub) opacity-0 hover:opacity-100 cursor-pointer stroke-white stroke-2"
                     d="M701 246.5V280.5L843.5 218.5L908.5 215.5L962 244V257L1068 310L1170 283L1213 310V272L1168.5 244L1064.5 270L908.5 179.5L843.5 183.5L701 246.5Z"
                   />
                   {/* 20 */}
@@ -757,12 +757,12 @@ const Rotation = ({
                       handleMouseEnterUtil(3, e);
                     }}
                     onMouseLeave={() => handleMouseLeaveUtil()}
-                    className="fill-sub opacity-0 hover:opacity-100 cursor-pointer stroke-white stroke-2"
+                    className="fill-(--sub) opacity-0 hover:opacity-100 cursor-pointer stroke-white stroke-2"
                     d="M699 609.5V579.5L864.5 569H909.5L1064.5 585.5L1169 582.5L1211 586V610L1169 608L1064.5 610L909.5 603.5H864.5L699 609.5Z"
                   />
                   {/* tang 3 */}
                   <g
-                    className="fill-sub opacity-0 hover:opacity-100 cursor-pointer stroke-white stroke-2"
+                    className="fill-(--sub) opacity-0 hover:opacity-100 cursor-pointer stroke-white stroke-2"
                     onPointerDown={(e) => {
                       pointerDownRef.current = { x: e.clientX, y: e.clientY };
                       hasDraggedRef.current = false;
@@ -789,7 +789,7 @@ const Rotation = ({
 
                   {/* tang 1 */}
                   <g
-                    className="fill-sub opacity-0 hover:opacity-100 cursor-pointer stroke-white stroke-2"
+                    className="fill-(--sub) opacity-0 hover:opacity-100 cursor-pointer stroke-white stroke-2"
                     onPointerDown={(e) => {
                       pointerDownRef.current = { x: e.clientX, y: e.clientY };
                       hasDraggedRef.current = false;
@@ -817,7 +817,7 @@ const Rotation = ({
 
                   {/* tang tret */}
                   <g
-                    className="fill-sub opacity-0 hover:opacity-100 cursor-pointer stroke-white stroke-2"
+                    className="fill-(--sub) opacity-0 hover:opacity-100 cursor-pointer stroke-white stroke-2"
                     onPointerDown={(e) => {
                       pointerDownRef.current = { x: e.clientX, y: e.clientY };
                       hasDraggedRef.current = false;
@@ -1213,7 +1213,7 @@ const Rotation = ({
                   </li>
                 </ul> */}
 
-                  <div className="w-full bg-sub flex justify-center items-center">
+                  <div className="w-full bg-(--sub) flex justify-center items-center">
                     <p className="px-1 text-white text-xs">
                       Click để xem chi tiết
                     </p>
@@ -1239,14 +1239,14 @@ const Rotation = ({
                       {hoveredUtilFloor === 0
                         ? "Tầng trệt"
                         : hoveredUtilFloor === 1
-                        ? "Tầng 1"
-                        : hoveredUtilFloor === 2
-                        ? "Tầng 3"
-                        : hoveredUtilFloor === 3
-                        ? "Tầng 20"
-                        : hoveredUtilFloor === 4
-                        ? "Tầng mái"
-                        : null}
+                          ? "Tầng 1"
+                          : hoveredUtilFloor === 2
+                            ? "Tầng 3"
+                            : hoveredUtilFloor === 3
+                              ? "Tầng 20"
+                              : hoveredUtilFloor === 4
+                                ? "Tầng mái"
+                                : null}
                     </h4>
                   </div>
 
@@ -1260,7 +1260,7 @@ const Rotation = ({
                 </li>
               </ul> */}
 
-                  <div className="w-full bg-sub flex justify-center items-center">
+                  <div className="w-full bg-(--sub) flex justify-center items-center">
                     <p className={`py-2 px-1 text-white text-xs`}>
                       Click để xem chi tiết
                     </p>
@@ -1392,15 +1392,14 @@ const UtilitiesFilter = ({
       {isVisibleFilter && (
         <div className="w-full h-auto md:h-fit gap-1 text-center">
           <div>
-            <h2 className="mb-2 text-sm font-bold text-sub hidden md:inline-block">
+            <h2 className="mb-2 text-sm font-bold text-(--sub) hidden md:inline-block">
               CÁC TÒA
             </h2>
             <div className="flex justify-center items-center md:grid md:grid-cols-2 gap-2">
               {/* hover:opacity-100 */}
               <div
-                className={`py-2 px-5 ${
-                  frameIndex === 75 ? "bg-[#FFC73C]" : "bg-sub"
-                } hover:bg-[#FFC73C] rounded-lg text-white text-xs cursor-pointer`}
+                className={`py-2 px-5 ${frameIndex === 75 ? "bg-[#FFC73C]" : "bg-(--sub)"
+                  } hover:bg-[#FFC73C] rounded-lg text-white text-xs cursor-pointer`}
                 onClick={() => {
                   !isSnapping && smoothSnapToFrame(75);
                 }}
@@ -1409,9 +1408,8 @@ const UtilitiesFilter = ({
               </div>
               {/* hover:bg-[#ff7b6e] */}
               <div
-                className={`py-2 px-5 ${
-                  frameIndex === 45 ? "bg-[#ff7b6e]" : "bg-sub"
-                } hover:bg-[#ff7b6e] rounded-lg text-white text-xs cursor-pointer`}
+                className={`py-2 px-5 ${frameIndex === 45 ? "bg-[#ff7b6e]" : "bg-(--sub)"
+                  } hover:bg-[#ff7b6e] rounded-lg text-white text-xs cursor-pointer`}
                 onClick={() => {
                   !isSnapping && smoothSnapToFrame(45);
                 }}
@@ -1420,9 +1418,8 @@ const UtilitiesFilter = ({
               </div>
               {/* hover:bg-[#1d9597] */}
               <div
-                className={`py-2 px-5 ${
-                  frameIndex === 15 ? "bg-[#1d9597]" : "bg-sub"
-                } hover:bg-[#1d9597] rounded-lg text-white text-xs cursor-pointer`}
+                className={`py-2 px-5 ${frameIndex === 15 ? "bg-[#1d9597]" : "bg-(--sub)"
+                  } hover:bg-[#1d9597] rounded-lg text-white text-xs cursor-pointer`}
                 onClick={() => {
                   !isSnapping && smoothSnapToFrame(15);
                 }}
@@ -1431,9 +1428,8 @@ const UtilitiesFilter = ({
               </div>
               {/* hover:bg-[#7e0202] */}
               <div
-                className={`py-2 px-5 ${
-                  frameIndex === 105 ? "bg-[#7e0202]" : "bg-sub"
-                } hover:bg-[#7e0202] rounded-lg text-white text-xs cursor-pointer`}
+                className={`py-2 px-5 ${frameIndex === 105 ? "bg-[#7e0202]" : "bg-(--sub)"
+                  } hover:bg-[#7e0202] rounded-lg text-white text-xs cursor-pointer`}
                 onClick={() => {
                   !isSnapping && smoothSnapToFrame(105);
                 }}
@@ -1447,7 +1443,7 @@ const UtilitiesFilter = ({
 
       {/* Nút thu gọn */}
       <div
-        className="hidden md:block bg-primary px-10 rounded-md mt-2 text-sub w-max mx-auto hover:cursor-pointer"
+        className="hidden md:block bg-(--primary) px-10 rounded-md mt-2 text-(--sub) w-max mx-auto hover:cursor-pointer"
         onClick={() => setIsVisibleFilter(!isVisibleFilter)}
       >
         {isVisibleFilter ? <CaretUpOutlined /> : <CaretDownOutlined />}
@@ -1566,9 +1562,8 @@ const Utilities = () => {
         />
       </div>
       <div
-        className={`${!iframeData.currentsence ? "block" : "hidden"} ${
-          !isVisibleUtilDetail ? "block" : "hidden"
-        }`}
+        className={`${!iframeData.currentsence ? "block" : "hidden"} ${!isVisibleUtilDetail ? "block" : "hidden"
+          }`}
       >
         <Rotation
           setIframeData={setIframeData}
@@ -1626,7 +1621,7 @@ const Utilities = () => {
               {/* {!isVisibleFloorDetail && (
                 <button
                   className={`w-10 h-10 ${
-                    !isVisibleMobileFilter ? "bg-sub" : "bg-sub/60"
+                    !isVisibleMobileFilter ? "bg-(--sub)" : "bg-sub/60"
                   }  flex md:hidden justify-center items-center rounded-md`}
                   onClick={() => toggleFilterVisible()}
                 >
