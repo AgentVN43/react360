@@ -7,7 +7,7 @@
 }
 @font-face {
   font-family: "Custom";
-  src: url("/src/assets/fonts/1KReey.otf") format("opentype");
+  src: url("/fonts/1KReey.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -15,7 +15,7 @@
 
 @font-face {
   font-family: "Custom2";
-  src: url("/src/assets/fonts/1FTV-Aptumi.ttf") format("opentype");
+  src: url("/fonts/1FTV-Aptumi.ttf") format("opentype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -23,7 +23,7 @@
 
 @font-face {
   font-family: "risa";
-  src: url("/src/assets/fonts/1FTV-VIP-Casbery.otf") format("opentype");
+  src: url("/fonts/1FTV-VIP-Casbery.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -31,7 +31,7 @@
 
 @font-face {
   font-family: "Gliker";
-  src: url("/src/assets/fonts/Gliker-Black.ttf") format("opentype");
+  src: url("/fonts/Gliker-Black.ttf") format("opentype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;

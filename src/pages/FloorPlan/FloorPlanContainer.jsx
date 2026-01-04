@@ -48,11 +48,10 @@ const FloorPlanContainer = ({
     <section className="PlanContainer_wrapper hidden md:block h-full w-full absolute overflow-visible">
       <div className="absolute top-5 left-1/2 -translate-x-1/2 max-h-[420px] overflow-auto text-center bg-[#faffee]">
         <h1
-          className={`${
-            block === "zenia" && "font-kreey text-primary text-4xl"
-          } ${
+          className={`${block === "zenia" && "text-primary text-4xl"} ${
             block === "risa" && "text-[#5B5A5A] text-4xl md:text-xl uppercase"
-          }  `}
+          }`}
+          style={block === "zenia" ? { fontFamily: '"Custom"' } : undefined}
         >
           Mặt bằng
         </h1>
