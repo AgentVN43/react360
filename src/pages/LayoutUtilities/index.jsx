@@ -50,23 +50,21 @@ const LayoutUtilitiesFilter = ({
 
   return (
     <section
-      className={`${
-        isVisibleMobileFilter ? "translate-x-0" : " -translate-x-full"
-      } transition-all duration-300 Navbar_wrapper fixed top-0 left-0 md:left-4 md:top-[425px] w-screen md:w-52 h-screen md:max-h-[550px] md:h-auto overflow-auto 
+      className={`${isVisibleMobileFilter ? "translate-x-0" : " -translate-x-full"
+        } transition-all duration-300 Navbar_wrapper fixed top-0 left-0 md:left-4 md:top-[425px] w-screen md:w-52 h-screen md:max-h-[550px] md:h-auto overflow-auto 
          bg-white/60 backdrop-blur-md border border-white/10 shadow-lg 
           rounded-none md:rounded-md p-4 md:p-2 space-y-4 md:space-y-2 z-[80] md:z-40`}
     >
       <div className={`${isVisibleFilter ? "block" : "hidden"}`}>
         <div className="mt-20 mb-2 px-2 md:mt-0 w-full h-auto md:h-full gap-1 text-center">
-          <h2 className="mb-1 text-sm font-bold text-sub hidden md:inline-block">
+          <h2 className="mb-1 text-sm font-bold text-(--sub) hidden md:inline-block">
             CÁC TÒA
           </h2>
           <div className="grid grid-cols-2 gap-2">
             {/* hover:opacity-100 */}
             <div
-              className={`${
-                activeFilterNumber === 75 ? "opacity-100" : "opacity-40"
-              } bg-[#FFC73C] py-2 rounded-lg text-white text-xs cursor-pointer hover:opacity-80 transition-all`}
+              className={`${activeFilterNumber === 75 ? "opacity-100" : "opacity-40"
+                } bg-[#FFC73C] py-2 rounded-lg text-white text-xs cursor-pointer hover:opacity-80 transition-all`}
               onClick={() => {
                 setActiveFilterNumber(75);
                 setSelectedUtilFilter(0);
@@ -78,9 +76,8 @@ const LayoutUtilitiesFilter = ({
             </div>
             {/* hover:bg-[#ff7b6e] */}
             <div
-              className={`${
-                activeFilterNumber === 45 ? "opacity-100" : "opacity-40"
-              } py-2 bg-[#ff7b6e] rounded-lg text-white text-xs cursor-pointer hover:opacity-80 transition-all`}
+              className={`${activeFilterNumber === 45 ? "opacity-100" : "opacity-40"
+                } py-2 bg-[#ff7b6e] rounded-lg text-white text-xs cursor-pointer hover:opacity-80 transition-all`}
               onClick={() => {
                 setActiveFilterNumber(45);
                 setSelectedUtilFilter(0);
@@ -91,11 +88,11 @@ const LayoutUtilitiesFilter = ({
               Risa
             </div>
             {/* hover:bg-[#1d9597] */}
-            <div className="py-2 bg-sub rounded-lg text-white text-xs cursor-pointer opacity-30">
+            <div className="py-2 bg-(--sub) rounded-lg text-white text-xs cursor-pointer opacity-30">
               Vista
             </div>
             {/* hover:bg-[#7e0202] */}
-            <div className="py-2 bg-sub rounded-lg text-white text-xs cursor-pointer opacity-30">
+            <div className="py-2 bg-(--sub) rounded-lg text-white text-xs cursor-pointer opacity-30">
               Lira
             </div>
           </div>
@@ -104,7 +101,7 @@ const LayoutUtilitiesFilter = ({
         <div className="block md:hidden">
           {/* Back */}
           <button
-            className="absolute top-5 left-5 p-2 flex md:hidden justify-center items-center text-center z-20 rounded-full bg-sub border border-white"
+            className="absolute top-5 left-5 p-2 flex md:hidden justify-center items-center text-center z-20 rounded-full bg-(--sub) border border-white"
             onClick={() => setisVisibleMobileFilter(!isVisibleMobileFilter)}
           >
             <img
@@ -113,7 +110,7 @@ const LayoutUtilitiesFilter = ({
               className="w-5 h-5 object-contain cursor-pointer"
             />
           </button>
-          <div className="absolute top-4 left-1/2 -translate-x-1/2 p-2 text-sub font-bold text-base flex justify-center items-center text-center z-20">
+          <div className="absolute top-4 left-1/2 -translate-x-1/2 p-2 text-(--sub) font-bold text-base flex justify-center items-center text-center z-20">
             Bộ lọc
           </div>
         </div>
@@ -127,11 +124,10 @@ const LayoutUtilitiesFilter = ({
               section.itemsUtilFilter.map((item, indx) => (
                 <li
                   key={indx}
-                  className={`flex justify-center items-center text-center hover:cursor-pointer ${
-                    indx === selectedUtilFilter
-                      ? "bg-primary text-sub hover:bg-primary hover:text-sub"
-                      : "bg-sub text-white hover:bg-primary hover:text-sub"
-                  } w-full h-8 md:h-7 text-xs rounded-lg`}
+                  className={`flex justify-center items-center text-center hover:cursor-pointer ${indx === selectedUtilFilter
+                    ? "bg-(--primary) text-(--sub) hover:bg-(--primary) hover:text-(--sub)"
+                    : "bg-(--sub) text-white hover:bg-(--primary) hover:text-(--sub)"
+                    } w-full h-8 md:h-7 text-xs rounded-lg`}
                   onClick={() => {
                     // if (item.img === null) return;
                     setSelectedUtilFilter(indx);
@@ -152,13 +148,13 @@ const LayoutUtilitiesFilter = ({
               <li
                 key={index}
                 className={`flex justify-start items-center gap-2 text-center hover:cursor-pointer
-                     w-full h-8 md:h-7 text-xs rounded-lg text-white bg-sub hover:bg-primary hover:text-sub pl-3`}
+                     w-full h-8 md:h-7 text-xs rounded-lg text-white bg-(--sub) hover:bg-(--primary) hover:text-(--sub) pl-3`}
                 onMouseEnter={() => setHoveredUtilItem(item.id)}
                 onMouseLeave={() => setHoveredUtilItem(null)}
               >
                 <span
                   className="w-4 h-4 rounded-full bg-white 
-                  flex justify-center items-center text-sub font-bold"
+                  flex justify-center items-center text-(--sub) font-bold"
                 >
                   {item.id}
                 </span>
@@ -171,7 +167,7 @@ const LayoutUtilitiesFilter = ({
 
       {/* Nút thu gọn */}
       <div
-        className="hidden md:block bg-primary px-10 rounded-md mt-2 text-sub w-max mx-auto hover:cursor-pointer"
+        className="hidden md:block bg-(--primary) px-10 rounded-md mt-2 text-(--sub) w-max mx-auto hover:cursor-pointer"
         onClick={() => setIsVisibleFilter(!isVisibleFilter)}
       >
         {isVisibleFilter ? <CaretUpOutlined /> : <CaretDownOutlined />}
@@ -280,9 +276,8 @@ const LayoutUtilities = () => {
             <>
               {/* Mở/Tắt Filter */}
               <button
-                className={`w-10 h-10 ${
-                  !isVisibleMobileFilter ? "bg-sub" : "bg-sub/60"
-                }  flex md:hidden justify-center items-center rounded-md`}
+                className={`w-10 h-10 ${!isVisibleMobileFilter ? "bg-(--sub)" : "bg-(--sub)/60"
+                  }  flex md:hidden justify-center items-center rounded-md`}
                 onClick={() => toggleFilterVisible()}
               >
                 <svg

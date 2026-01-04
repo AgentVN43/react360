@@ -3,7 +3,7 @@ import React from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const basePath =import.meta.env.REACT_APP_BASE_PATH;
+const basePath = import.meta.env.REACT_APP_BASE_PATH;
 
 const Verify = ({ setCheckVerify }) => {
   const navigate = useNavigate();
@@ -30,12 +30,12 @@ const Verify = ({ setCheckVerify }) => {
             type="text"
             maxLength="16"
             placeholder="Nhập mã xác nhận"
-            className="border-b-2  focus:outline-none focus:border-primary text-center "
+            className="border-b-2  focus:outline-none focus:border-(--primary) text-center "
           />
         </div>
         <button
           type="submit"
-          className="action text-white bg-primary p-2 rounded-xl"
+          className="action text-white bg-(--primary) p-2 rounded-xl"
           onClick={() => handleCheckVerify()}
         >
           Xác Nhận

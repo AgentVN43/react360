@@ -1,120 +1,38 @@
 @import "tailwindcss";
 
-@layer base {
-  button {
-  }
+@theme {
+  --font-display: "Satoshi", "sans-serif";
+  --sub: #4d7939;
+  --primary: #d7ff8d;
 }
-
 @font-face {
-  font-family: 'Custom'; 
-  src: url('../assets/fonts/1KReey.otf') format('opentype'); 
+  font-family: "Custom";
+  src: url("/src/assets/fonts/1KReey.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Custom2'; 
-  src: url('../assets/fonts/1KReey.otf') format('opentype'); 
+  font-family: "Custom2";
+  src: url("/src/assets/fonts/1FTV-Aptumi.ttf") format("opentype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'risa';
-  src: url('../assets/fonts/1KReey.otf') format('opentype'); 
+  font-family: "risa";
+  src: url("/src/assets/fonts/1FTV-VIP-Casbery.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Gliker';
-  src: url('../assets/fonts/1KReey.otf') format('opentype');
+  font-family: "Gliker";
+  src: url("/src/assets/fonts/Gliker-Black.ttf") format("opentype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
-
-html, body, #root {
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  height: 100%;
-}
-
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: "Wix Madefor Display", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-  font-weight: 500;
-}
-
-/*
-.driver-popover {
-  color: #4d7939!important;
-}
-
-iframe {
-  border: none;
-  height: 100%;
-  width: 100%;
-}
-
-/* animation stroke svg 
-@keyframes strokeBlink {
-  0%, 100% {
-    stroke: #4d7939;
-    stroke-width: 2;
-  }
-  50% {
-    stroke: white;
-    stroke-width: 3;
-  }
-}
-
-.blink-stroke {
-  animation: strokeBlink 1.5s infinite;
-}
-.blink-stroke:hover {
-  fill-opacity: 80;
-}
-
-.itemPlan:hover {
-  fill-opacity: 80;
-}
-
-@keyframes bounceTopDown {
-  0% {
-    transform: translateY(-10px);
-  }
-  50% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-10px);
-  }
-}
-.bounce-top-down {
-  animation: bounceTopDown 1.5s infinite;
-}
-
-@keyframes bounceLeftRight {
-  0% {
-    transform: translateX(10px);
-  }
-  50% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(10px);
-  }
-}
-
-.bounce-left-right {
-  animation: bounceLeftRight 1.5s infinite;
-} */

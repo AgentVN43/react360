@@ -111,7 +111,7 @@ const Location = () => {
             <>
               {/* <button
                 className={`w-10 h-10 ${
-                  !isVisibleMobileInfo ? "bg-sub/60" : "bg-sub"
+                  !isVisibleMobileInfo ? "bg-sub/60" : "bg-(--sub) 
                 }  flex justify-center items-center rounded-md`}
                 onClick={() => setIsVisibleMobileInfo(!isVisibleMobileInfo)}
               >

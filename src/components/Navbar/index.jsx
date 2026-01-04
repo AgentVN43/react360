@@ -41,12 +41,12 @@ const navList = [
   },
   {
     id: 6,
-    label: <FormattedMessage id="nav.5" defaultMessage="Layout Điển Hình" />,
+    label: <FormattedMessage id="nav.6" defaultMessage="Layout Điển Hình" />,
     href: "/layout-dien-hinh",
   },
   {
     id: 7,
-    label: <FormattedMessage id="nav.6" defaultMessage="Nội Thất Căn Hộ" />,
+    label: <FormattedMessage id="nav.7" defaultMessage="Nội Thất Căn Hộ" />,
     href: "/house/1pn",
   },
 ];
@@ -146,7 +146,7 @@ const Navbar = () => {
 
       <div className={`transition-all duration-500 `}>
         {!isMobileNav && (
-          <div className="w-full h-8 px-3 flex justify-start items-center rounded-md bg-primary text-sub">
+          <div className="w-full h-8 px-3 flex justify-start items-center rounded-md bg-(--primary) text-(--sub)">
             <p className="text-xs font-semibold">
               {navList.find((item) => item.id === activeMenu).label}
             </p>
@@ -157,10 +157,9 @@ const Navbar = () => {
             <li key={index}>
               <Link
                 className={`w-full h-8 px-3 flex justify-start items-center rounded-md
-                  hover:bg-primary hover:text-sub ${
-                    activeMenu === item.id
-                      ? "bg-primary text-sub"
-                      : "bg-sub text-white"
+                  hover:bg-(--primary) hover:text-(--sub) ${activeMenu === item.id
+                    ? "bg-(--primary) text-(--sub)"
+                    : "bg-(--sub) text-white"
                   }`}
                 onClick={() => {
                   handleActiveNav(item);
@@ -173,15 +172,104 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
-        {/* <div
-          className="flex md:hidden justify-center items-center bg-primary px-10 rounded-md mt-2
-          text-sub w-full py-1"
-          onClick={() => setisMobileNav(!isMobileNav)}
-        >
-          {isMobileNav ? <CaretUpOutlined /> : <CaretDownOutlined />}
-        </div> */}
       </div>
     </section>
+    // <section
+    //   className="fixed top-6 left-6 z-50
+    //     w-64 md:w-72
+
+    //     bg-[#f0f7ee]/90 backdrop-blur-xl
+    //     border border-white/50 shadow-2xl
+
+    //     p-5 rounded-[2.5rem]
+
+    //     flex flex-col gap-6
+    //     transition-all duration-300"
+    // >
+    //   {/* 1. LOGO SECTION - Padding lớn tạo điểm nhấn thương hiệu */}
+    //   <div className="flex flex-col items-center pt-4 pb-2 relative">
+    //     <div className="w-full flex justify-center items-center px-4 mb-4">
+    //       <img
+    //         src={nav_logo}
+    //         alt="nav_logo"
+    //         className="w-3/4 object-contain transition-transform hover:scale-105"
+    //       />
+    //     </div>
+
+    //     {/* Nút Mobile - Cải tiến vị trí để không phá layout */}
+    //     <button
+    //       className="md:hidden absolute -right-2 top-0 bg-white/50 p-2 rounded-full shadow-sm"
+    //       onClick={() => setisMobileNav(!isMobileNav)}
+    //     >
+    //       {isMobileNav ? <CaretUpOutlined /> : <CaretDownOutlined />}
+    //     </button>
+
+    //     {/* Đường gạch ngang tinh tế */}
+    //     <div className="h-[1px] w-2/3 bg-green-800/10" />
+    //   </div>
+
+    //   {/* 2. NAVIGATION LIST */}
+    //   <div className="flex-1 overflow-y-auto no-scrollbar">
+    //     {/* Mobile: Hiển thị item hiện tại khi thu gọn */}
+    //     {!isMobileNav && (
+    //       <div className="w-full h-12 px-5 flex items-center rounded-2xl bg-primary text-sub shadow-sm border border-primary/20">
+    //         <span className="text-xs font-bold uppercase tracking-wider truncate">
+    //           {navList.find((item) => item.id === activeMenu)?.label}
+    //         </span>
+    //       </div>
+    //     )}
+
+    //     {/* Danh sách chính - space-y-3 tạo MARGIN giữa các Item */}
+    //     <ul
+    //       className={`space-y-3 transition-all ${isMobileNav ? "block" : "hidden md:block"
+    //         }`}
+    //     >
+    //       {navList.map((item, index) => {
+    //         const isActive = activeMenu === item.id;
+    //         return (
+    //           <li key={index}>
+    //             <Link
+    //               to={item.href}
+    //               onClick={() => {
+    //                 handleActiveNav(item);
+    //                 if (isMobile) setisMobileNav(false);
+    //               }}
+    //               className={`
+    //                 /* Kích thước & Padding cho Item */
+    //                 w-full min-h-[48px] px-5 py-3
+    //                 flex items-center justify-start rounded-2xl
+
+    //                 /* Typography */
+    //                 text-[13px] font-bold uppercase tracking-wide
+
+    //                 /* Hiệu ứng & Màu sắc */
+    //                 transition-all duration-300 transform
+
+    //                 ${isActive
+    //                   ? "bg-[#d4fc79] text-[#2d4a1e] shadow-lg shadow-green-200/50 scale-[1.03] translate-x-1"
+    //                   : "bg-[#5a7a44] text-white hover:bg-[#6d8c52] hover:translate-x-2"
+    //                 }
+    //               `}
+    //             >
+    //               <span className="block truncate">{item.label}</span>
+    //             </Link>
+    //           </li>
+    //         );
+    //       })}
+    //     </ul>
+    //   </div>
+
+    //   {/* 3. OPTIONAL: FOOTER/VIEW BOX (Nếu cần thêm như trong ảnh) */}
+    //   {isMobileNav && (
+    //     <div className="pt-2">
+    //       <div className="text-[10px] text-center text-green-800/40 font-bold uppercase tracking-[0.2em]">
+    //         La Pura Residence
+    //       </div>
+    //     </div>
+    //   )}
+    // </section>
+
+    // <div className="fixed top-8 left-8 h-[calc(100vh-48px)] z-50 bg-white">test</div>
   );
 };
 
