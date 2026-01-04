@@ -1,33 +1,33 @@
 import React, { useEffect, useState } from "react";
-import { apartmentLayout, plan_filter } from "../../data/data";
+import { plan_filter } from "../../data/data";
 import { CaretDownOutlined, CaretUpOutlined } from "@ant-design/icons";
 import { useDispatch, useSelector } from "react-redux";
 // import { hideGuide } from "../../redux/features/GuideSlice";
-import HouseSampleView from "../../components/HouseSampleView";
-import PlanDetails from "../../components/PlanDetails";
+// import HouseSampleView from "../../components/HouseSampleView";
+// import PlanDetails from "../../components/PlanDetails";
 import { updateResponsiveState } from "../../redux/features/ResponsiveSlice";
-import PlanDetailsMobile from "../../components/PlanDetailsMobile";
+// import PlanDetailsMobile from "../../components/PlanDetailsMobile";
 
-import back_icon2 from "../../assets/icons/back_icon2.png";
-import next_icon from "../../assets/icons/next_icon.png";
-import check from "../../assets/icons/check.png";
-import circle_alert from "../../assets/icons/circle-alert_black.png";
-import plan_apartmentLayout from "../../assets/images/plan_apartmentLayout.png";
-import plan_tower from "../../assets/images/plan_tower.png";
-import plan_tower_27 from "../../assets/images/plan_tower_27.png";
-import plan_tower_s1 from "../../assets/images/plan_tower_s1.png";
-import plan_tower_27_s1 from "../../assets/images/plan_tower_27_s1.png";
+// import back_icon2 from "../../assets/icons/back_icon2.png";
+// import next_icon from "../../assets/icons/next_icon.png";
+// import check from "../../assets/icons/check.png";
+// import circle_alert from "../../assets/icons/circle-alert_black.png";
+// import plan_apartmentLayout from "../../assets/images/plan_apartmentLayout.png";
+// import plan_tower from "../../assets/images/plan_tower.png";
+// import plan_tower_27 from "../../assets/images/plan_tower_27.png";
+// import plan_tower_s1 from "../../assets/images/plan_tower_s1.png";
+// import plan_tower_27_s1 from "../../assets/images/plan_tower_27_s1.png";
 
-import laban from "../../assets/images/location/laban.png";
-import dinhviBlock from "../../assets/images/plan/dinh_vi_block.png";
+// import laban from "../../assets/images/location/laban.png";
+// import dinhviBlock from "../../assets/images/plan/dinh_vi_block.png";
 
-import SideTools from "../../components/SideTools";
-import Util from "../../components/Util";
+// import SideTools from "../../components/SideTools";
+// import Util from "../../components/Util";
 import { useNavigate, useParams } from "react-router-dom";
 import ErrorPage from "../ErrorPage";
 import { showGuideSVG2 } from "../../redux/features/GuideSlice";
 
-const basePath =import.meta.env.REACT_APP_BASE_PATH;
+const basePath = import.meta.env.REACT_APP_BASE_PATH;
 
 const LayoutUtilitiesFilter = ({
   activeFilterNumber,
@@ -40,7 +40,7 @@ const LayoutUtilitiesFilter = ({
   setHoveredUtilItem,
   isMobile,
   navigate,
-  block
+  block,
 }) => {
   const [isVisibleFilter, setIsVisibleFilter] = useState(true);
 
@@ -136,7 +136,9 @@ const LayoutUtilitiesFilter = ({
                     // if (item.img === null) return;
                     setSelectedUtilFilter(indx);
                     isMobile && setisVisibleMobileFilter(false);
-                    navigate(`${basePath}/mat-bang-tien-ich/${block}/${item.slug}`);
+                    navigate(
+                      `${basePath}/mat-bang-tien-ich/${block}/${item.slug}`
+                    );
                   }}
                 >
                   <h4 className="font-medium">{item.label}</h4>
@@ -194,16 +196,16 @@ const LayoutUtilities = () => {
 
   const dispatch = useDispatch();
   const { activedGuideSVG2 } = useSelector((state) => state.guide);
-  const planState = useSelector((state) => state.plan);
-  const { activeHouseSampleView } = planState;
+  // const planState = useSelector((state) => state.plan);
+  // const { activeHouseSampleView } = planState;
   const responsiveState = useSelector((state) => state.responsive);
   const { isMobile } = responsiveState;
 
   const [activeFilterNumber, setActiveFilterNumber] = useState(
     matchedBlock ?? 75
   );
-  const [activeFilterItemNumber, setActiveFilterItemNumber] = useState(1);
-  const [isVisibleProductDetail, setisVisibleProductDetail] = useState(false);
+  // const [activeFilterItemNumber, setActiveFilterItemNumber] = useState(1);
+  // const [isVisibleProductDetail, setisVisibleProductDetail] = useState(false);
   const [isVisibleMobileFilter, setisVisibleMobileFilter] = useState(false);
   const [selectedUtilFilter, setSelectedUtilFilter] = useState(
     plan_filter

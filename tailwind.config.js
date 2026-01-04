@@ -10,6 +10,12 @@ export default {
         primary: "#4D7E37",
         sub: "#F5F5DC",
       },
+      fontFamily: {
+        "kreey": ["Custom"],
+        "custom2": ["Custom2"],
+        "gliker": ["Gliker"],
+        "risa": ["risa"],
+      },
     },
   },
   plugins: [],

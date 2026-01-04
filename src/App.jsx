@@ -6,6 +6,8 @@ import LoadingPage from "./pages/LoadingPage";
 import SharedLayout from "./pages/SharedLayout";
 import { useSelector } from "react-redux";
 import { IntlProvider } from "react-intl";
+import LayoutUtilities from "./pages/LayoutUtilities";
+import FloorPlan from "./pages/FloorPlan";
 
 export default function App() {
   const languageState = useSelector((state) => state.language);
@@ -20,10 +22,18 @@ export default function App() {
             {checkVerify ? (
               <Routes>
                 <Route path="/" element={<LoadingPage />} />
-                <Route path="/toan-canh" element={<SharedLayout />}>
+                <Route element={<SharedLayout />}>
                   <Route index element={<Home />} />
+                  <Route
+                    path="mat-bang-tang/:block/:floor"
+                    element={<FloorPlan />}
+                  />
+                  <Route
+                    path="mat-bang-tien-ich/:block/:floor"
+                    element={<LayoutUtilities />}
+                  />
                 </Route>
-                <Route path="*" element={<ErrorPage />} />
+                {/* <Route path="*" element={<ErrorPage />} /> */}
               </Routes>
             ) : (
               <Routes>
