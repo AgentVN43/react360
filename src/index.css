@@ -36,3 +36,153 @@
   font-style: normal;
   font-display: swap;
 }
+
+.blink-stroke {
+  animation: strokeBlink 1.5s infinite;
+}
+.blink-stroke:hover {
+  fill-opacity: 80;
+}
+
+.itemPlan:hover {
+  fill-opacity: 80;
+}
+
+@keyframes bounceTopDown {
+  0% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+.bounce-top-down {
+  animation: bounceTopDown 1.5s infinite;
+}
+
+@keyframes bounceLeftRight {
+  0% {
+    transform: translateX(10px);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(10px);
+  }
+}
+
+.bounce-left-right {
+  animation: bounceLeftRight 1.5s infinite;
+}
+@keyframes pulse {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0.1;
+    transform: scale(1.5);
+  }
+}
+@keyframes popping {
+  0% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes gradientShift {
+  0% {
+    stop-color: rgb(87, 59, 23);
+    stop-opacity: 1;
+  }
+  50% {
+    stop-color: rgb(151, 112, 44);
+    stop-opacity: 1;
+  }
+  100% {
+    stop-color: rgb(252, 235, 193);
+    stop-opacity: 1;
+  }
+}
+@keyframes gradientShiftReverse {
+  0% {
+    stop-color: rgb(252, 235, 193);
+    stop-opacity: 1;
+  }
+  50% {
+    stop-color: rgb(151, 112, 44);
+    stop-opacity: 1;
+  }
+  100% {
+    stop-color: rgb(87, 59, 23);
+    stop-opacity: 1;
+  }
+}
+#paint0_linear_2048_1052 stop:first-child,
+#paint0_linear_2048_1052 stop:nth-child(2) {
+  animation: 3s linear 0s infinite normal none running gradientShift;
+}
+#paint0_linear_2048_1052 stop:nth-child(3) {
+  animation: 3s linear 0s infinite normal none running gradientShiftReverse;
+}
+.pulsing {
+  animation: 2s linear 0s infinite normal none running pulse;
+  transform-origin: 57% center;
+}
+.popping {
+  animation: 2s linear 0s infinite normal none running popping;
+}
+@keyframes fadeInOut {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.8;
+  }
+}
+.element-1 {
+  animation: 5s ease 0s infinite normal none running fadeInOut;
+}
+.element-2 {
+  animation: 5s ease 1s infinite normal none running fadeInOut;
+}
+.element-3 {
+  animation: 5s ease 2s infinite normal none running fadeInOut;
+}
+.element-4 {
+  animation: 5s ease 3s infinite normal none running fadeInOut;
+}
+.element-5 {
+  animation: 5s ease 4s infinite normal none running fadeInOut;
+}
+.map_svg_active path {
+  fill-opacity: 10;
+  stroke: rgb(255, 255, 255);
+  stroke-miterlimit: 10;
+  stroke-width: 3;
+  stroke-dasharray: 8, 10;
+  stroke-dashoffset: 150;
+  stroke-linecap: round;
+}
+.map_svg_active path:nth-child(2n),
+.map_svg_active path:nth-child(2n + 1) {
+  animation: 2s linear 0s infinite normal none running pathMove;
+}
+@keyframes pathMove {
+  100% {
+    stroke-dashoffset: 10;
+  }
+}

@@ -1,15 +1,15 @@
 import React, { useEffect, useRef, useState } from "react";
 // import { FormattedMessage } from "react-intl";
 import { DownOutlined, UpOutlined } from "@ant-design/icons";
-import "./Location.scss";
+// import "./Location.scss";
 
 import location_map from "../../assets/images/location/location.png";
-import pin from "../../assets/images/location/pin.png";
+// import pin from "../../assets/images/location/pin.png";
 import laban from "../../assets/images/location/laban2.png";
 
-import circle_alert from "../../assets/icons/circle-alert.png";
-import back_icon2 from "../../assets/icons/back_icon2.png";
-import info_icon from "../../assets/icons/info.svg";
+// import circle_alert from "../../assets/icons/circle-alert.png";
+// import back_icon2 from "../../assets/icons/back_icon2.png";
+// import info_icon from "../../assets/icons/info.svg";
 import SideTools from "../../components/SideTools";
 import { useSelector } from "react-redux";
 import InfoLocation from "../../components/InfoLocation";
@@ -17,7 +17,7 @@ import InfoLocation from "../../components/InfoLocation";
 const DottedRow = ({ label, time }) => (
   <div className="flex items-baseline text-xs">
     <span className="mr-2 text-nowrap">{label}</span>
-    <div className="flex-grow border-b border-dotted border-green-700 mx-2"></div>
+    <div className="grow border-b border-dotted border-green-700 mx-2"></div>
     <span className="text-nowrap">{time}</span>
   </div>
 );

@@ -1,28 +1,24 @@
-import React, { useEffect, useRef, useState } from "react";
-import "./Utilities.scss";
-import {
-  apartmentLayout,
-  utilities_filter,
-  utilities_plan_stopframe,
-  utilities_stopframe,
-} from "../../data/data";
 import { CaretDownOutlined, CaretUpOutlined } from "@ant-design/icons";
-import HouseSampleView from "../../components/HouseSampleView";
+import { useEffect, useRef, useState } from "react";
+import { apartmentLayout, utilities_plan_stopframe } from "../../data/data";
+import "./Utilities.scss";
+// import HouseSampleView from "../../components/HouseSampleView";
 import { useDispatch, useSelector } from "react-redux";
 import { updateResponsiveState } from "../../redux/features/ResponsiveSlice";
-import PlanDetailsMobile from "../../components/PlanDetailsMobile";
-import PlanDetails from "../../components/PlanDetails";
-import back_icon2 from "../../assets/icons/back_icon2.png";
-import next_icon from "../../assets/icons/next_icon.png";
-import check from "../../assets/icons/check.png";
+// import PlanDetailsMobile from "../../components/PlanDetailsMobile";
+// import PlanDetails from "../../components/PlanDetails";
+// import back_icon2 from "../../assets/icons/back_icon2.png";
+// import next_icon from "../../assets/icons/next_icon.png";
+// import check from "../../assets/icons/check.png";
 import SideTools from "../../components/SideTools";
 // import compass from "../../assets/images/compass.png";
 
-import FloorDetail from "../../components/FloorDetail";
-import SvgUtilRotaion from "../../components/SvgUtilRotaion";
-import UtilDetail from "../../components/UtilDetail";
-import { showGuideSVG } from "../../redux/features/GuideSlice";
+// import FloorDetail from "../../components/FloorDetail";
+// import SvgUtilRotaion from "../../components/SvgUtilRotaion";
+// import UtilDetail from "../../components/UtilDetail";
 import GuideSVG from "../../components/Guide/GuideSVG";
+import { showGuideSVG } from "../../redux/features/GuideSlice";
+import FloorDetail from "../../components/FloorDetail";
 
 const TOTAL_FRAMES = 120;
 
@@ -32,7 +28,7 @@ const STOP_FRAMES_11_TYPE_PLAN_BUTTON = [1, 2, 3, 9, 4, 5, 6, 7];
 // const STOP_FRAMES_47_TYPE_PLAN_BUTTON = [2, 3, 4, 5, 7];
 // const STOP_FRAMES_74_TYPE_PLAN_BUTTON = [2, 3, 4, 5, 7];
 // const url = "https://360.goku.agency/goku-data/rotation_utils/";
-const url = "../../assets/images/rotation_utils/new/";
+const url = "../../assets/images/rotation_utils/";
 
 const Rotation = ({
   setIframeData,
@@ -77,8 +73,9 @@ const Rotation = ({
 
   useEffect(() => {
     const loadImages = async () => {
-      const imagePaths = Array.from({ length: TOTAL_FRAMES }, (_, i) =>
-        require(`../../assets/images/rotation_utils/new/${i + 1}.jpg`)
+      const imagePaths = Array.from(
+        { length: TOTAL_FRAMES },
+        (_, i) => `/src/assets/images/rotation_utils/${i + 1}.jpg`
       );
 
       const imagePromises = imagePaths.map((path) => {
@@ -1217,11 +1214,11 @@ const Rotation = ({
                     <p className="px-1 text-white text-xs">
                       Click để xem chi tiết
                     </p>
-                    <img
+                    {/* <img
                       src={next_icon}
                       alt="next_icon"
                       className="px-1 w-8 h-8 object-contain"
-                    />
+                    /> */}
                   </div>
                 </div>
               </div>
@@ -1264,11 +1261,11 @@ const Rotation = ({
                     <p className={`py-2 px-1 text-white text-xs`}>
                       Click để xem chi tiết
                     </p>
-                    <img
+                    {/* <img
                       src={next_icon}
                       alt="next_icon"
                       className="px-1 w-8 h-8 object-contain"
-                    />
+                    /> */}
                   </div>
                 </div>
               </div>
@@ -1353,7 +1350,7 @@ const Rotation = ({
           <StopFramePlanComponent />
           <img
             className="car-image lg:scale-100 xl:scale-[1.0]"
-            src={require(`../../assets/images/rotation_utils/new/${frameIndex}.jpg`)}
+            src={`/src/assets/images/rotation_utils/${frameIndex}.jpg`}
             alt="building"
           />
         </div>
@@ -1556,7 +1553,7 @@ const Utilities = () => {
       `}
       >
         <img
-          src={require(`../../assets/images/rotation_utils/new/${currentFrameIndex}.jpg`)}
+          src={`/src/assets/images/rotation_utils/${currentFrameIndex}.jpg`}
           alt="background"
           className="w-full h-full object-cover absolute top-0 left-0 z-[-1] blur-sm"
         />
