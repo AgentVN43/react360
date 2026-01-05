@@ -1,28 +1,24 @@
-import React, { useEffect, useRef, useState } from "react";
-import "./Utilities.scss";
-import {
-  apartmentLayout,
-  utilities_filter,
-  utilities_plan_stopframe,
-  utilities_stopframe,
-} from "../../data/data";
 import { CaretDownOutlined, CaretUpOutlined } from "@ant-design/icons";
-import HouseSampleView from "../../components/HouseSampleView";
+import { useEffect, useRef, useState } from "react";
+import { apartmentLayout, utilities_plan_stopframe } from "../../data/data";
+import "./Utilities.scss";
+// import HouseSampleView from "../../components/HouseSampleView";
 import { useDispatch, useSelector } from "react-redux";
 import { updateResponsiveState } from "../../redux/features/ResponsiveSlice";
-import PlanDetailsMobile from "../../components/PlanDetailsMobile";
-import PlanDetails from "../../components/PlanDetails";
-import back_icon2 from "../../assets/icons/back_icon2.png";
-import next_icon from "../../assets/icons/next_icon.png";
-import check from "../../assets/icons/check.png";
+// import PlanDetailsMobile from "../../components/PlanDetailsMobile";
+// import PlanDetails from "../../components/PlanDetails";
+// import back_icon2 from "../../assets/icons/back_icon2.png";
+// import next_icon from "../../assets/icons/next_icon.png";
+// import check from "../../assets/icons/check.png";
 import SideTools from "../../components/SideTools";
 // import compass from "../../assets/images/compass.png";
 
-import FloorDetail from "../../components/FloorDetail";
-import SvgUtilRotaion from "../../components/SvgUtilRotaion";
-import UtilDetail from "../../components/UtilDetail";
-import { showGuideSVG } from "../../redux/features/GuideSlice";
+// import FloorDetail from "../../components/FloorDetail";
+// import SvgUtilRotaion from "../../components/SvgUtilRotaion";
+// import UtilDetail from "../../components/UtilDetail";
 import GuideSVG from "../../components/Guide/GuideSVG";
+import { showGuideSVG } from "../../redux/features/GuideSlice";
+import FloorDetail from "../../components/FloorDetail";
 
 const TOTAL_FRAMES = 120;
 
@@ -32,7 +28,7 @@ const STOP_FRAMES_11_TYPE_PLAN_BUTTON = [1, 2, 3, 9, 4, 5, 6, 7];
 // const STOP_FRAMES_47_TYPE_PLAN_BUTTON = [2, 3, 4, 5, 7];
 // const STOP_FRAMES_74_TYPE_PLAN_BUTTON = [2, 3, 4, 5, 7];
 // const url = "https://360.goku.agency/goku-data/rotation_utils/";
-const url = "../../assets/images/rotation_utils/new/";
+const url = "../../assets/images/rotation_utils/";
 
 const Rotation = ({
   setIframeData,
@@ -77,8 +73,9 @@ const Rotation = ({
 
   useEffect(() => {
     const loadImages = async () => {
-      const imagePaths = Array.from({ length: TOTAL_FRAMES }, (_, i) =>
-        require(`../../assets/images/rotation_utils/new/${i + 1}.jpg`)
+      const imagePaths = Array.from(
+        { length: TOTAL_FRAMES },
+        (_, i) => `/src/assets/images/rotation_utils/${i + 1}.jpg`
       );
 
       const imagePromises = imagePaths.map((path) => {
@@ -108,23 +105,23 @@ const Rotation = ({
       const id = setInterval(() => {
         previousNextFrame === 2
           ? setFrameIndex((prevFrameIndex) => {
-            const nextFrame = (prevFrameIndex % TOTAL_FRAMES) + 1;
-            if (STOP_FRAMES.includes(nextFrame)) {
-              setIsAutoRotatePreviousNextFrame(false); // Stop auto-rotate if nextFrame matches any stop frame
-              return nextFrame; // Keep the frame unchanged
-            }
-            return nextFrame;
-          })
+              const nextFrame = (prevFrameIndex % TOTAL_FRAMES) + 1;
+              if (STOP_FRAMES.includes(nextFrame)) {
+                setIsAutoRotatePreviousNextFrame(false); // Stop auto-rotate if nextFrame matches any stop frame
+                return nextFrame; // Keep the frame unchanged
+              }
+              return nextFrame;
+            })
           : setFrameIndex((prevFrameIndex) => {
-            const nextFrame =
-              prevFrameIndex - 1 <= 0 ? TOTAL_FRAMES : prevFrameIndex - 1;
-            if (STOP_FRAMES.includes(nextFrame)) {
-              setIsAutoRotatePreviousNextFrame(false); // Stop auto-rotate if nextFrame matches any stop frame
-              return nextFrame; // Keep the frame unchanged
-            }
+              const nextFrame =
+                prevFrameIndex - 1 <= 0 ? TOTAL_FRAMES : prevFrameIndex - 1;
+              if (STOP_FRAMES.includes(nextFrame)) {
+                setIsAutoRotatePreviousNextFrame(false); // Stop auto-rotate if nextFrame matches any stop frame
+                return nextFrame; // Keep the frame unchanged
+              }
 
-            return nextFrame;
-          });
+              return nextFrame;
+            });
       }, 100); // Adjust the auto-rotate speed
 
       setIntervalId(id);
@@ -297,14 +294,14 @@ const Rotation = ({
       // });
       !isMobile
         ? setDivStyle({
-          // top: `${e.clientY - 150}px`,
-          top: `25%`,
-          left: `${e.clientX + 80}px`, // Adjust the position to your liking
-        })
+            // top: `${e.clientY - 150}px`,
+            top: `25%`,
+            left: `${e.clientX + 80}px`, // Adjust the position to your liking
+          })
         : setDivStyle({
-          top: `5%`,
-          left: `30%`, // Adjust the position to your liking
-        });
+            top: `5%`,
+            left: `30%`, // Adjust the position to your liking
+          });
     };
 
     const handleMouseLeave = () => {
@@ -322,14 +319,14 @@ const Rotation = ({
       // });
       !isMobile
         ? setDivStyle({
-          // top: `${e.clientY - 150}px`,
-          top: `25%`,
-          left: `${e.clientX + 80}px`, // Adjust the position to your liking
-        })
+            // top: `${e.clientY - 150}px`,
+            top: `25%`,
+            left: `${e.clientX + 80}px`, // Adjust the position to your liking
+          })
         : setDivStyle({
-          top: `5%`,
-          left: `30%`, // Adjust the position to your liking
-        });
+            top: `5%`,
+            left: `30%`, // Adjust the position to your liking
+          });
     };
 
     const handleMouseLeaveUtil = () => {
@@ -1217,11 +1214,11 @@ const Rotation = ({
                     <p className="px-1 text-white text-xs">
                       Click để xem chi tiết
                     </p>
-                    <img
+                    {/* <img
                       src={next_icon}
                       alt="next_icon"
                       className="px-1 w-8 h-8 object-contain"
-                    />
+                    /> */}
                   </div>
                 </div>
               </div>
@@ -1239,14 +1236,14 @@ const Rotation = ({
                       {hoveredUtilFloor === 0
                         ? "Tầng trệt"
                         : hoveredUtilFloor === 1
-                          ? "Tầng 1"
-                          : hoveredUtilFloor === 2
-                            ? "Tầng 3"
-                            : hoveredUtilFloor === 3
-                              ? "Tầng 20"
-                              : hoveredUtilFloor === 4
-                                ? "Tầng mái"
-                                : null}
+                        ? "Tầng 1"
+                        : hoveredUtilFloor === 2
+                        ? "Tầng 3"
+                        : hoveredUtilFloor === 3
+                        ? "Tầng 20"
+                        : hoveredUtilFloor === 4
+                        ? "Tầng mái"
+                        : null}
                     </h4>
                   </div>
 
@@ -1264,11 +1261,11 @@ const Rotation = ({
                     <p className={`py-2 px-1 text-white text-xs`}>
                       Click để xem chi tiết
                     </p>
-                    <img
+                    {/* <img
                       src={next_icon}
                       alt="next_icon"
                       className="px-1 w-8 h-8 object-contain"
-                    />
+                    /> */}
                   </div>
                 </div>
               </div>
@@ -1353,7 +1350,7 @@ const Rotation = ({
           <StopFramePlanComponent />
           <img
             className="car-image lg:scale-100 xl:scale-[1.0]"
-            src={require(`../../assets/images/rotation_utils/new/${frameIndex}.jpg`)}
+            src={`/src/assets/images/rotation_utils/${frameIndex}.jpg`}
             alt="building"
           />
         </div>
@@ -1398,8 +1395,9 @@ const UtilitiesFilter = ({
             <div className="flex justify-center items-center md:grid md:grid-cols-2 gap-2">
               {/* hover:opacity-100 */}
               <div
-                className={`py-2 px-5 ${frameIndex === 75 ? "bg-[#FFC73C]" : "bg-(--sub)"
-                  } hover:bg-[#FFC73C] rounded-lg text-white text-xs cursor-pointer`}
+                className={`py-2 px-5 ${
+                  frameIndex === 75 ? "bg-[#FFC73C]" : "bg-(--sub)"
+                } hover:bg-[#FFC73C] rounded-lg text-white text-xs cursor-pointer`}
                 onClick={() => {
                   !isSnapping && smoothSnapToFrame(75);
                 }}
@@ -1408,8 +1406,9 @@ const UtilitiesFilter = ({
               </div>
               {/* hover:bg-[#ff7b6e] */}
               <div
-                className={`py-2 px-5 ${frameIndex === 45 ? "bg-[#ff7b6e]" : "bg-(--sub)"
-                  } hover:bg-[#ff7b6e] rounded-lg text-white text-xs cursor-pointer`}
+                className={`py-2 px-5 ${
+                  frameIndex === 45 ? "bg-[#ff7b6e]" : "bg-(--sub)"
+                } hover:bg-[#ff7b6e] rounded-lg text-white text-xs cursor-pointer`}
                 onClick={() => {
                   !isSnapping && smoothSnapToFrame(45);
                 }}
@@ -1418,8 +1417,9 @@ const UtilitiesFilter = ({
               </div>
               {/* hover:bg-[#1d9597] */}
               <div
-                className={`py-2 px-5 ${frameIndex === 15 ? "bg-[#1d9597]" : "bg-(--sub)"
-                  } hover:bg-[#1d9597] rounded-lg text-white text-xs cursor-pointer`}
+                className={`py-2 px-5 ${
+                  frameIndex === 15 ? "bg-[#1d9597]" : "bg-(--sub)"
+                } hover:bg-[#1d9597] rounded-lg text-white text-xs cursor-pointer`}
                 onClick={() => {
                   !isSnapping && smoothSnapToFrame(15);
                 }}
@@ -1428,8 +1428,9 @@ const UtilitiesFilter = ({
               </div>
               {/* hover:bg-[#7e0202] */}
               <div
-                className={`py-2 px-5 ${frameIndex === 105 ? "bg-[#7e0202]" : "bg-(--sub)"
-                  } hover:bg-[#7e0202] rounded-lg text-white text-xs cursor-pointer`}
+                className={`py-2 px-5 ${
+                  frameIndex === 105 ? "bg-[#7e0202]" : "bg-(--sub)"
+                } hover:bg-[#7e0202] rounded-lg text-white text-xs cursor-pointer`}
                 onClick={() => {
                   !isSnapping && smoothSnapToFrame(105);
                 }}
@@ -1556,14 +1557,15 @@ const Utilities = () => {
       `}
       >
         <img
-          src={require(`../../assets/images/rotation_utils/new/${currentFrameIndex}.jpg`)}
+          src={`/src/assets/images/rotation_utils/${currentFrameIndex}.jpg`}
           alt="background"
           className="w-full h-full object-cover absolute top-0 left-0 z-[-1] blur-sm"
         />
       </div>
       <div
-        className={`${!iframeData.currentsence ? "block" : "hidden"} ${!isVisibleUtilDetail ? "block" : "hidden"
-          }`}
+        className={`${!iframeData.currentsence ? "block" : "hidden"} ${
+          !isVisibleUtilDetail ? "block" : "hidden"
+        }`}
       >
         <Rotation
           setIframeData={setIframeData}

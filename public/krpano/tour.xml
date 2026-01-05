@@ -71,7 +71,7 @@
 
 
 	<scene name="scene_R0011231_20250502120525" title="R0011231_20250502120525" onstart=""
-		thumburl="panos/R0011231_20250502120525.tiles/thumb.jpg" lat="10.95024722"
+		thumburl="/krpano/panos/R0011231_20250502120525.tiles/thumb.jpg" lat="10.95024722"
 		lng="108.20699444" alt="12.70" heading="142.0">
 
 		<control bouncinglimits="calc:image.cube ? true : false" />
@@ -79,17 +79,17 @@
 		<view hlookat="142.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70"
 			fovmax="140" limitview="auto" />
 
-		<preview url="panos/R0011231_20250502120525.tiles/preview.jpg" />
+		<preview url="/krpano/panos/R0011231_20250502120525.tiles/preview.jpg" />
 
 		<image prealign="0|142.0|0">
-			<cube url="panos/R0011231_20250502120525.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg"
+			<cube url="/krpano/panos/R0011231_20250502120525.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg"
 				multires="512,768,1664" />
 		</image>
 
 	</scene>
 
 	<scene name="scene_R0011232_20250502120604" title="R0011232_20250502120604" onstart=""
-		thumburl="panos/R0011232_20250502120604.tiles/thumb.jpg" lat="10.95022222"
+		thumburl="/krpano/panos/R0011232_20250502120604.tiles/thumb.jpg" lat="10.95022222"
 		lng="108.20705833" alt="12.60" heading="65.9">
 
 		<control bouncinglimits="calc:image.cube ? true : false" />
@@ -97,17 +97,17 @@
 		<view hlookat="65.9" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70"
 			fovmax="140" limitview="auto" />
 
-		<preview url="panos/R0011232_20250502120604.tiles/preview.jpg" />
+		<preview url="/krpano/panos/R0011232_20250502120604.tiles/preview.jpg" />
 
 		<image prealign="0|65.9|0">
-			<cube url="panos/R0011232_20250502120604.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg"
+			<cube url="/krpano/panos/R0011232_20250502120604.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg"
 				multires="512,768,1664" />
 		</image>
 
 	</scene>
 
 	<scene name="scene_R0011233_20250502120641" title="R0011233_20250502120641" onstart=""
-		thumburl="panos/R0011233_20250502120641.tiles/thumb.jpg" lat="10.95025833"
+		thumburl="/krpano/panos/R0011233_20250502120641.tiles/thumb.jpg" lat="10.95025833"
 		lng="108.20714722" alt="12.70" heading="58.6">
 
 		<control bouncinglimits="calc:image.cube ? true : false" />
@@ -115,10 +115,10 @@
 		<view hlookat="58.6" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70"
 			fovmax="140" limitview="auto" />
 
-		<preview url="panos/R0011233_20250502120641.tiles/preview.jpg" />
+		<preview url="/krpano/panos/R0011233_20250502120641.tiles/preview.jpg" />
 
 		<image prealign="0|58.6|0">
-			<cube url="panos/R0011233_20250502120641.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg"
+			<cube url="/krpano/panos/R0011233_20250502120641.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg"
 				multires="512,768,1664" />
 		</image>
 

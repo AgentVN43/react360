@@ -5,6 +5,7 @@
   --sub: #4d7939;
   --primary: #d7ff8d;
 }
+
 @font-face {
   font-family: "Custom";
   src: url("/fonts/1KReey.otf") format("opentype");
