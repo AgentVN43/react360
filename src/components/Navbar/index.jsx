@@ -17,7 +17,7 @@ const navList = [
   {
     id: 1,
     label: <FormattedMessage id="nav.2" defaultMessage="Tổng Quan La Pura" />,
-    href: "/toan-canh",
+    href: "/",
   },
   {
     id: 2,
@@ -47,7 +47,7 @@ const navList = [
   {
     id: 7,
     label: <FormattedMessage id="nav.7" defaultMessage="Nội Thất Căn Hộ" />,
-    href: "/house/1pn",
+    href: "/house",
   },
 ];
 

@@ -157,7 +157,7 @@ const PlanContainer = ({
               </li> */}
             </ul>
 
-            {/* <div className="w-full bg-sub flex justify-center items-center">
+            {/* <div className="w-full bg-(--sub) flex justify-center items-center">
               <p className="px-1 text-white text-xs">Click để xem chi tiết</p>
               <img
                 src={next_icon}
@@ -177,6 +177,7 @@ const FloorDetail = ({
   activeFilterItem,
   activeFilterNumber,
 }) => {
+  console.log("🚀 ~ FloorDetail ~ activeFilterNumber:", activeFilterNumber)
   const dispatch = useDispatch();
 
   const responsiveState = useSelector((state) => state.responsive);
@@ -206,6 +207,7 @@ const FloorDetail = ({
   const selectedSection = plan_filter.find(
     (section) => section.id === activeFilterNumber
   );
+  console.log("🚀 ~ FloorDetail ~ selectedSection:", selectedSection)
   const selectedItem = selectedSection.itemsApartmentFilter.find(
     (item) => item.id === activeFilterItem.floorGroup
   );
@@ -225,13 +227,13 @@ const FloorDetail = ({
       overflow-auto bg-[#faffee] z-40 h-fit"
       >
         <h1
-          className={`${activeFilterNumber === 75 && "font-1kreey text-primary text-4xl"
+          className={`${activeFilterNumber === 75 && "font-1kreey text-(--primary) text-4 xl"
             } ${activeFilterNumber === 45 && "font-risa text-risa text-4xl md:text-5xl"}  `}
         >
           Mặt bằng
         </h1>
         <h1
-          className={`${activeFilterNumber === 75 && "text-sub"} ${activeFilterNumber === 45 && "text-[#3e3e3e]"
+          className={`${activeFilterNumber === 75 && "text-(--sub)"} ${activeFilterNumber === 45 && "text-[#3e3e3e]"
             } text-3xl uppercase text-center py-2 font-custom2`}
         >
           Tầng {selectedItem.label}
@@ -240,7 +242,7 @@ const FloorDetail = ({
 
       {/* Back */}
       <button
-        className="fixed top-[20px] left-4 md:left-64 p-2 px-3 flex justify-center items-center text-center z-20 rounded-full bg-sub border border-white 
+        className="fixed top-[20px] left-4 md:left-64 p-2 px-3 flex justify-center items-center text-center z-20 rounded-full bg-(--sub) border border-white 
         cursor-pointer hover:opacity-80"
         onClick={() => handleBackToPlan()}
       >
@@ -260,7 +262,7 @@ const FloorDetail = ({
         />
         <div
           className="fixed right-1/2 translate-x-1/2 md:translate-x-0 bottom-16 md:right-10 md:bottom-56 z-10 w-20 md:w-52
-            p-2 border-4 border-sub rounded-md
+            p-2 border-4 border-(--sub) rounded-md
           "
         >
           <img
