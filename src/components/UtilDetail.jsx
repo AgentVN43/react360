@@ -16,7 +16,7 @@ const UtilDetail = ({ pathUtilSelected, setIsVisibleUtilDetail, blockId }) => {
       <div className="w-full h-full absolute top-0 left-0 z-[55] md:z-40 bg-[#faffee] overflow-auto">
         {/* Back */}
         <button
-          className="fixed z-20 top-[20px] left-4 md:left-64 p-2 px-3 flex justify-center items-center text-center rounded-full bg-sub border border-white 
+          className="fixed z-20 top-[20px] left-4 md:left-64 p-2 px-3 flex justify-center items-center text-center rounded-full bg-(--sub) border border-white 
         cursor-pointer hover:opacity-80 md:hidden"
           onMouseDown={() => setIsVisibleUtilDetail(false)}
         >
@@ -32,7 +32,7 @@ const UtilDetail = ({ pathUtilSelected, setIsVisibleUtilDetail, blockId }) => {
         </div>
       </div>
       <button
-        className="fixed z-50 top-[20px] left-4 md:left-60 p-2 px-3 hidden md:flex justify-center items-center text-center rounded-full bg-sub border border-white 
+        className="fixed z-50 top-[20px] left-4 md:left-60 p-2 px-3 hidden md:flex justify-center items-center text-center rounded-full bg-(--sub) border border-white 
         cursor-pointer hover:opacity-80"
         onMouseDown={() => setIsVisibleUtilDetail(false)}
       >

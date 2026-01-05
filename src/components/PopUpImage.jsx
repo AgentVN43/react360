@@ -61,7 +61,7 @@ const PopUpImage = ({ currentImage, imagesPopUp, setIsShowPopUp }) => {
               } absolute -bottom-3 md:bottom-0 left-0 right-0
             pt-12 pb-4 sm:pt-16 sm:pb-6 px-3 sm:px-6`}
             >
-              <h3 className="text-sub text-base sm:text-lg md:text-2xl font-bold text-center">
+              <h3 className="text-(--sub) text-base sm:text-lg md:text-2xl font-bold text-center">
                 {item.title}
               </h3>
             </div> */}
@@ -71,7 +71,7 @@ const PopUpImage = ({ currentImage, imagesPopUp, setIsShowPopUp }) => {
         <button
           onClick={handlePrevious}
           className="absolute md:fixed left-1 md:left-12 top-1/2 -translate-y-1/2 p-2 rounded-full 
-          md:hover:bg-sub md:hover:text-white bg-sub text-white md:text-slate-800 md:bg-white border-none"
+          md:hover:bg-(--sub) md:hover:text-white bg-(--sub) text-white md:text-slate-800 md:bg-white border-none"
         >
           <ChevronLeft size={24} className="hidden md:block" />
           <ChevronLeft size={14} className="md:hidden block" />
@@ -79,7 +79,7 @@ const PopUpImage = ({ currentImage, imagesPopUp, setIsShowPopUp }) => {
         <button
           onClick={handleNext}
           className="absolute md:fixed right-1 md:right-12 top-1/2 -translate-y-1/2 p-2 rounded-full 
-          md:hover:bg-sub md:hover:text-white bg-sub text-white md:text-slate-800 md:bg-white border-none"
+          md:hover:bg-(--sub) md:hover:text-white bg-(--sub) text-white md:text-slate-800 md:bg-white border-none"
         >
           <ChevronRight size={24} className="hidden md:block" />
           <ChevronRight size={14} className="md:hidden block" />
@@ -92,7 +92,7 @@ const PopUpImage = ({ currentImage, imagesPopUp, setIsShowPopUp }) => {
         {/* Close btn */}
         <div
           className="absolute top-2 right-2 w-6 h-6 md:w-9 md:h-9 flex items-center justify-center bg-white
-          rounded-full cursor-pointer text-sub hover:bg-sub hover:text-white"
+          rounded-full cursor-pointer text-(--sub) hover:bg-(--sub) hover:text-white"
           onClick={() => setIsShowPopUp(false)}
           onTouchStart={() => setIsShowPopUp(false)}
         >
@@ -110,8 +110,8 @@ const PopUpImage = ({ currentImage, imagesPopUp, setIsShowPopUp }) => {
                   key={actualIndex}
                   onClick={() => setCurrentSlide(actualIndex)}
                   className={`w-24 md:w-32 ${actualIndex === currentSlide
-                      ? "opacity-100 border-2 border-sub"
-                      : "opacity-60 border-2 border-transparent"
+                    ? "opacity-100 border-2 border-(--sub)"
+                    : "opacity-60 border-2 border-transparent"
                     } rounded-lg p-0 cursor-pointer`}
                   src={item.img}
                   alt={`Thumbnail ${actualIndex + 1}`}
@@ -127,7 +127,7 @@ const PopUpImage = ({ currentImage, imagesPopUp, setIsShowPopUp }) => {
                 onClick={() => setCurrentSlide(i * 7)}
                 className={`w-2 h-2 rounded-full transition-all duration-300 ${
                   currentGroup === i
-                    ? "bg-sub w-[1.5rem]"
+                    ? "bg-(--sub) w-[1.5rem]"
                     : "bg-gray-400 hover:bg-gray-600"
                 }`}
                 aria-label={`Go to group ${i + 1}`}

@@ -7,12 +7,13 @@ import SharedLayout from "./pages/SharedLayout";
 import { useSelector } from "react-redux";
 import { IntlProvider } from "react-intl";
 import FloorPlan from "./pages/FloorPlan";
-import LayoutUtilitiesA from "./pages/LayoutUtilitiesA";
-import Utilities from "./pages/Utilities";
+import Overview from "./pages/Overview"
 import Location from "./pages/Location"
+import Utilities from "./pages/Utilities";
+// import LayoutUtilitiesA from "./pages/LayoutUtilitiesA";
 import Test from "./pages/Test";
 import FloorPlanEditor from "./pages/Test/FloorPlanEditor";
-import Overview from "./pages/Overview";
+
 export default function App() {
   const languageState = useSelector((state) => state.language);
   const { locale, messages } = languageState;
@@ -27,14 +28,17 @@ export default function App() {
               <Routes>
                 <Route path="/" element={<LoadingPage />} />
                 <Route element={<SharedLayout />}>
-                  <Route index element={<Home />} />
+                  <Route path="/toan-canh" element={<Overview />} />
+                  <Route path="mat-bang-tang/:block/:floor" element={<FloorPlan />} />
+                  <Route path="test" element={<Test />} />
+                  <Route path="floor-plan" element={<FloorPlanEditor />} />
+                  <Route path="mat-bang-tong-the" element={<Utilities />} />
+                  <Route path="house" element={<Home />} />
+                  <Route path="house/:type" element={<Home />} />
                   <Route
-                    path="mat-bang-tang/:block/:floor"
-                    element={<FloorPlan />}
-                  />
-                  <Route
-                    path="mat-bang-tien-ich/:block/:floor"
-                    element={<LayoutUtilities />}
+                    index
+                    path={`lien-ket-vung`}
+                    element={<Location />}
                   />
                 </Route>
 

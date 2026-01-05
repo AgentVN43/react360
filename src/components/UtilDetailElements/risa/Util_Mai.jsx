@@ -37,8 +37,8 @@ const UtilMai = ({ hoveredUtilItem, scale, setCurrentMedia }) => {
           className={`${!plan_filter[1].itemsUtilFilter[4].items[1 - 1].isMedia
             ? "fill-[#a5bc99] hover:fill-[#a5bc99]"
             : hoveredUtilItem === 1
-              ? "fill-sub"
-              : "fill-[#ffc300] hover:fill-sub cursor-pointer"
+              ? "fill-(--sub)"
+              : "fill-[#ffc300] hover:fill-(--sub) cursor-pointer"
             }`}
         >
           <circle
@@ -87,8 +87,8 @@ const UtilMai = ({ hoveredUtilItem, scale, setCurrentMedia }) => {
           className={`${!plan_filter[1].itemsUtilFilter[4].items[2 - 1].isMedia
             ? "fill-[#a5bc99] hover:fill-[#a5bc99]"
             : hoveredUtilItem === 2
-              ? "fill-sub"
-              : "fill-[#ffc300] hover:fill-sub cursor-pointer"
+              ? "fill-(--sub)"
+              : "fill-[#ffc300] hover:fill-(--sub) cursor-pointer"
             }`}
         >
           <circle
@@ -178,8 +178,8 @@ const UtilMai = ({ hoveredUtilItem, scale, setCurrentMedia }) => {
           className={`${!plan_filter[1].itemsUtilFilter[4].items[3 - 1].isMedia
             ? "fill-[#a5bc99] hover:fill-[#a5bc99]"
             : hoveredUtilItem === 3
-              ? "fill-sub"
-              : "fill-[#ffc300] hover:fill-sub cursor-pointer"
+              ? "fill-(--sub)"
+              : "fill-[#ffc300] hover:fill-(--sub) cursor-pointer"
             }`}
         >
           <circle
@@ -269,8 +269,8 @@ const UtilMai = ({ hoveredUtilItem, scale, setCurrentMedia }) => {
           className={`${!plan_filter[1].itemsUtilFilter[4].items[4 - 1].isMedia
             ? "fill-[#a5bc99] hover:fill-[#a5bc99]"
             : hoveredUtilItem === 4
-              ? "fill-sub"
-              : "fill-[#ffc300] hover:fill-sub cursor-pointer"
+              ? "fill-(--sub)"
+              : "fill-[#ffc300] hover:fill-(--sub) cursor-pointer"
             }`}
         >
           <circle
@@ -319,8 +319,8 @@ const UtilMai = ({ hoveredUtilItem, scale, setCurrentMedia }) => {
           className={`${!plan_filter[1].itemsUtilFilter[4].items[5 - 1].isMedia
             ? "fill-[#a5bc99] hover:fill-[#a5bc99]"
             : hoveredUtilItem === 5
-              ? "fill-sub"
-              : "fill-[#ffc300] hover:fill-sub cursor-pointer"
+              ? "fill-(--sub)"
+              : "fill-[#ffc300] hover:fill-(--sub) cursor-pointer"
             }`}
         >
           <circle
@@ -410,8 +410,8 @@ const UtilMai = ({ hoveredUtilItem, scale, setCurrentMedia }) => {
           className={`${!plan_filter[1].itemsUtilFilter[4].items[6 - 1].isMedia
             ? "fill-[#a5bc99] hover:fill-[#a5bc99]"
             : hoveredUtilItem === 6
-              ? "fill-sub"
-              : "fill-[#ffc300] hover:fill-sub cursor-pointer"
+              ? "fill-(--sub)"
+              : "fill-[#ffc300] hover:fill-(--sub) cursor-pointer"
             }`}
         >
           <circle
@@ -460,8 +460,8 @@ const UtilMai = ({ hoveredUtilItem, scale, setCurrentMedia }) => {
           className={`${!plan_filter[1].itemsUtilFilter[4].items[7 - 1].isMedia
             ? "fill-[#a5bc99] hover:fill-[#a5bc99]"
             : hoveredUtilItem === 7
-              ? "fill-sub"
-              : "fill-[#ffc300] hover:fill-sub cursor-pointer"
+              ? "fill-(--sub)"
+              : "fill-[#ffc300] hover:fill-(--sub) cursor-pointer"
             }`}
         >
           <circle
@@ -510,8 +510,8 @@ const UtilMai = ({ hoveredUtilItem, scale, setCurrentMedia }) => {
           className={`${!plan_filter[1].itemsUtilFilter[4].items[8 - 1].isMedia
             ? "fill-[#a5bc99] hover:fill-[#a5bc99]"
             : hoveredUtilItem === 8
-              ? "fill-sub"
-              : "fill-[#ffc300] hover:fill-sub cursor-pointer"
+              ? "fill-(--sub)"
+              : "fill-[#ffc300] hover:fill-(--sub) cursor-pointer"
             }`}
         >
           <circle

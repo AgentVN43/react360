@@ -77,7 +77,7 @@ const UtilDetailElements = ({
         rounded-none md:rounded-md p-4 md:p-2 space-y-4 md:space-y-2 z-[80] md:z-50
         "
           >
-            <h1 className="text-center text-2xl text-sub font-1kreey py-2">
+            <h1 className="text-center text-2xl text-(--sub) font-1kreey py-2">
               Các tiện ích
             </h1>
             <ul className="mt-2 px-3 overflow-y-auto md:max-h-[70vh] space-y-2">
@@ -88,8 +88,8 @@ const UtilDetailElements = ({
                     className={`flex justify-start items-center gap-2 text-center hover:cursor-pointer
                    w-full h-8 md:h-7 text-xs rounded-lg 
                    ${item.isMedia
-                        ? "text-white bg-sub hover:bg-primary hover:text-sub"
-                        : "bg-sub/50 text-white"
+                        ? "text-white bg-(--sub) hover:bg-(--primary) hover:text-(--sub)"
+                        : "bg-(--sub)/50 text-white"
                       }
                    pl-2`}
                     onMouseEnter={() => setHoveredUtilItem(item.id)}
@@ -101,7 +101,7 @@ const UtilDetailElements = ({
                   >
                     <div
                       className="w-[20px] h-[18px] rounded-full bg-white 
-                flex justify-center items-center text-sub font-bold"
+                flex justify-center items-center text-(--sub) font-bold"
                     >
                       {item.id}
                     </div>
@@ -155,7 +155,7 @@ const UtilDetailElements = ({
                 <div className="flex justify-center items-center w-full">
                   <div className="flex gap-2 items-center md:mb-1">
                     <img src={line} alt="util_image" className="w-8 md:w-10" />
-                    <span className="text-xs md:text-sm text-sub text-nowrap">
+                    <span className="text-xs md:text-sm text-(--sub) text-nowrap">
                       Đường chạy bộ liên hoàn 1.000m
                     </span>
                   </div>
@@ -163,13 +163,13 @@ const UtilDetailElements = ({
                 <div className="flex justify-center items-center w-full gap-4 md:gap-10">
                   <div className="flex gap-2 items-center md:mb-1">
                     <img src={inout} alt="util_image" className="w-3 md:w-5" />
-                    <span className="text-xs md:text-sm text-sub text-nowrap">
+                    <span className="text-xs md:text-sm text-(--sub) text-nowrap">
                       Lối vào/ ra
                     </span>
                   </div>
                   <div className="flex gap-2 items-center">
                     <img src={updown} alt="util_image" className="w-3 md:w-5" />
-                    <span className="text-xs md:text-sm text-sub text-nowrap">
+                    <span className="text-xs md:text-sm text-(--sub) text-nowrap">
                       Lối lên/ xuống hầm
                     </span>
                   </div>
@@ -179,7 +179,7 @@ const UtilDetailElements = ({
                       alt="util_image"
                       className="w-8 md:w-10 px-[10px]"
                     />
-                    <span className="text-xs md:text-sm text-sub text-nowrap">
+                    <span className="text-xs md:text-sm text-(--sub) text-nowrap">
                       Bãi đậu xe
                     </span>
                   </div>
@@ -191,7 +191,7 @@ const UtilDetailElements = ({
                       alt="imageGuideIcon"
                       className="w-8 md:w-10 px-[10px]"
                     />
-                    <span className="text-xs md:text-sm text-sub text-nowrap">
+                    <span className="text-xs md:text-sm text-(--sub) text-nowrap">
                       Hình ảnh
                     </span>
                   </div>
@@ -201,7 +201,7 @@ const UtilDetailElements = ({
                       alt="util_image"
                       className="w-3 md:w-5"
                     />
-                    <span className="text-xs md:text-sm text-sub text-nowrap">
+                    <span className="text-xs md:text-sm text-(--sub) text-nowrap">
                       Video
                     </span>
                   </div>
@@ -211,7 +211,7 @@ const UtilDetailElements = ({
                       alt="util_image"
                       className="w-3 md:w-5"
                     />
-                    <span className="text-xs md:text-sm text-sub text-nowrap">
+                    <span className="text-xs md:text-sm text-(--sub) text-nowrap">
                       Đang cập nhật hình ảnh
                     </span>
                   </div>
@@ -237,19 +237,19 @@ const UtilDetailElements = ({
                       alt="util_image"
                       className="w-8 md:w-10 px-[10px]"
                     />
-                    <span className="text-xs md:text-sm text-sub text-nowrap">
+                    <span className="text-xs md:text-sm text-(--sub) text-nowrap">
                       Lối ra sân vườn
                     </span>
                   </div>
                   <div className="flex gap-2 items-center">
                     <img src={wc} alt="util_image" className="w-3 md:w-5" />
-                    <span className="text-xs md:text-sm text-sub text-nowrap">
+                    <span className="text-xs md:text-sm text-(--sub) text-nowrap">
                       Khu WC & Locker
                     </span>
                   </div>
                   <div className="flex gap-2 items-center">
                     <img src={shower} alt="util_image" className="w-3 md:w-5" />
-                    <span className="text-xs md:text-sm text-sub text-nowrap">
+                    <span className="text-xs md:text-sm text-(--sub) text-nowrap">
                       Khu tắm tráng
                     </span>
                   </div>
@@ -261,7 +261,7 @@ const UtilDetailElements = ({
                       alt="imageGuideIcon"
                       className="w-8 md:w-10 px-[10px]"
                     />
-                    <span className="text-xs md:text-sm text-sub text-nowrap">
+                    <span className="text-xs md:text-sm text-(--sub) text-nowrap">
                       Hình ảnh
                     </span>
                   </div>
@@ -271,7 +271,7 @@ const UtilDetailElements = ({
                       alt="util_image"
                       className="w-3 md:w-5"
                     />
-                    <span className="text-xs md:text-sm text-sub text-nowrap">
+                    <span className="text-xs md:text-sm text-(--sub) text-nowrap">
                       Video
                     </span>
                   </div>
@@ -281,7 +281,7 @@ const UtilDetailElements = ({
                       alt="util_image"
                       className="w-3 md:w-5"
                     />
-                    <span className="text-xs md:text-sm text-sub text-nowrap">
+                    <span className="text-xs md:text-sm text-(--sub) text-nowrap">
                       Đang cập nhật hình ảnh
                     </span>
                   </div>
@@ -307,19 +307,19 @@ const UtilDetailElements = ({
                       alt="util_image"
                       className="w-8 md:w-10 px-[10px]"
                     />
-                    <span className="text-xs md:text-sm text-sub text-nowrap">
+                    <span className="text-xs md:text-sm text-(--sub) text-nowrap">
                       Lối ra sân vườn
                     </span>
                   </div>
                   <div className="flex gap-2 items-center">
                     <img src={wc} alt="util_image" className="w-3 md:w-5" />
-                    <span className="text-xs md:text-sm text-sub text-nowrap">
+                    <span className="text-xs md:text-sm text-(--sub) text-nowrap">
                       Khu WC & Locker
                     </span>
                   </div>
                   <div className="flex gap-2 items-center">
                     <img src={shower} alt="util_image" className="w-3 md:w-5" />
-                    <span className="text-xs md:text-sm text-sub text-nowrap">
+                    <span className="text-xs md:text-sm text-(--sub) text-nowrap">
                       Khu tắm tráng
                     </span>
                   </div>
@@ -331,7 +331,7 @@ const UtilDetailElements = ({
                       alt="imageGuideIcon"
                       className="w-8 md:w-10 px-[10px]"
                     />
-                    <span className="text-xs md:text-sm text-sub text-nowrap">
+                    <span className="text-xs md:text-sm text-(--sub) text-nowrap">
                       Hình ảnh
                     </span>
                   </div>
@@ -341,7 +341,7 @@ const UtilDetailElements = ({
                       alt="util_image"
                       className="w-3 md:w-5"
                     />
-                    <span className="text-xs md:text-sm text-sub text-nowrap">
+                    <span className="text-xs md:text-sm text-(--sub) text-nowrap">
                       Video
                     </span>
                   </div>
@@ -351,7 +351,7 @@ const UtilDetailElements = ({
                       alt="util_image"
                       className="w-3 md:w-5"
                     />
-                    <span className="text-xs md:text-sm text-sub text-nowrap">
+                    <span className="text-xs md:text-sm text-(--sub) text-nowrap">
                       Đang cập nhật hình ảnh
                     </span>
                   </div>
@@ -383,7 +383,7 @@ const UtilDetailElements = ({
                 <div className="flex justify-center items-center w-full">
                   <div className="flex gap-2 items-center md:mb-1">
                     <img src={line} alt="util_image" className="w-8 md:w-10" />
-                    <span className="text-xs md:text-sm text-sub text-nowrap">
+                    <span className="text-xs md:text-sm text-(--sub) text-nowrap">
                       Đường chạy bộ liên hoàn 1.000m
                     </span>
                   </div>
@@ -391,13 +391,13 @@ const UtilDetailElements = ({
                 <div className="flex justify-center items-center w-full gap-4 md:gap-10">
                   <div className="flex gap-2 items-center md:mb-1">
                     <img src={inout} alt="util_image" className="w-3 md:w-5" />
-                    <span className="text-xs md:text-sm text-sub text-nowrap">
+                    <span className="text-xs md:text-sm text-(--sub) text-nowrap">
                       Lối vào/ ra
                     </span>
                   </div>
                   <div className="flex gap-2 items-center">
                     <img src={updown} alt="util_image" className="w-3 md:w-5" />
-                    <span className="text-xs md:text-sm text-sub text-nowrap">
+                    <span className="text-xs md:text-sm text-(--sub) text-nowrap">
                       Lối lên/ xuống hầm
                     </span>
                   </div>
@@ -407,7 +407,7 @@ const UtilDetailElements = ({
                       alt="util_image"
                       className="w-8 md:w-10 px-[10px]"
                     />
-                    <span className="text-xs md:text-sm text-sub text-nowrap">
+                    <span className="text-xs md:text-sm text-(--sub) text-nowrap">
                       Bãi đậu xe
                     </span>
                   </div>
@@ -419,7 +419,7 @@ const UtilDetailElements = ({
                       alt="imageGuideIcon"
                       className="w-8 md:w-10 px-[10px]"
                     />
-                    <span className="text-xs md:text-sm text-sub text-nowrap">
+                    <span className="text-xs md:text-sm text-(--sub) text-nowrap">
                       Hình ảnh
                     </span>
                   </div>
@@ -429,7 +429,7 @@ const UtilDetailElements = ({
                       alt="util_image"
                       className="w-3 md:w-5"
                     />
-                    <span className="text-xs md:text-sm text-sub text-nowrap">
+                    <span className="text-xs md:text-sm text-(--sub) text-nowrap">
                       Video
                     </span>
                   </div>
@@ -439,7 +439,7 @@ const UtilDetailElements = ({
                       alt="util_image"
                       className="w-3 md:w-5"
                     />
-                    <span className="text-xs md:text-sm text-sub text-nowrap">
+                    <span className="text-xs md:text-sm text-(--sub) text-nowrap">
                       Đang cập nhật hình ảnh
                     </span>
                   </div>
@@ -465,19 +465,19 @@ const UtilDetailElements = ({
                       alt="util_image"
                       className="w-8 md:w-10 px-[10px]"
                     />
-                    <span className="text-xs md:text-sm text-sub text-nowrap">
+                    <span className="text-xs md:text-sm text-(--sub) text-nowrap">
                       Lối ra sân vườn
                     </span>
                   </div>
                   <div className="flex gap-2 items-center">
                     <img src={wc} alt="util_image" className="w-3 md:w-5" />
-                    <span className="text-xs md:text-sm text-sub text-nowrap">
+                    <span className="text-xs md:text-sm text-(--sub) text-nowrap">
                       Khu WC & Locker
                     </span>
                   </div>
                   <div className="flex gap-2 items-center">
                     <img src={shower} alt="util_image" className="w-3 md:w-5" />
-                    <span className="text-xs md:text-sm text-sub text-nowrap">
+                    <span className="text-xs md:text-sm text-(--sub) text-nowrap">
                       Khu tắm tráng
                     </span>
                   </div>
@@ -489,7 +489,7 @@ const UtilDetailElements = ({
                       alt="imageGuideIcon"
                       className="w-8 md:w-10 px-[10px]"
                     />
-                    <span className="text-xs md:text-sm text-sub text-nowrap">
+                    <span className="text-xs md:text-sm text-(--sub) text-nowrap">
                       Hình ảnh
                     </span>
                   </div>
@@ -499,7 +499,7 @@ const UtilDetailElements = ({
                       alt="util_image"
                       className="w-3 md:w-5"
                     />
-                    <span className="text-xs md:text-sm text-sub text-nowrap">
+                    <span className="text-xs md:text-sm text-(--sub) text-nowrap">
                       Video
                     </span>
                   </div>
@@ -509,7 +509,7 @@ const UtilDetailElements = ({
                       alt="util_image"
                       className="w-3 md:w-5"
                     />
-                    <span className="text-xs md:text-sm text-sub text-nowrap">
+                    <span className="text-xs md:text-sm text-(--sub) text-nowrap">
                       Đang cập nhật hình ảnh
                     </span>
                   </div>
@@ -535,19 +535,19 @@ const UtilDetailElements = ({
                       alt="util_image"
                       className="w-8 md:w-10 px-[10px]"
                     />
-                    <span className="text-xs md:text-sm text-sub text-nowrap">
+                    <span className="text-xs md:text-sm text-(--sub) text-nowrap">
                       Lối ra sân vườn
                     </span>
                   </div>
                   <div className="flex gap-2 items-center">
                     <img src={wc} alt="util_image" className="w-3 md:w-5" />
-                    <span className="text-xs md:text-sm text-sub text-nowrap">
+                    <span className="text-xs md:text-sm text-(--sub) text-nowrap">
                       Khu WC & Locker
                     </span>
                   </div>
                   <div className="flex gap-2 items-center">
                     <img src={shower} alt="util_image" className="w-3 md:w-5" />
-                    <span className="text-xs md:text-sm text-sub text-nowrap">
+                    <span className="text-xs md:text-sm text-(--sub) text-nowrap">
                       Khu tắm tráng
                     </span>
                   </div>
@@ -559,7 +559,7 @@ const UtilDetailElements = ({
                       alt="imageGuideIcon"
                       className="w-8 md:w-10 px-[10px]"
                     />
-                    <span className="text-xs md:text-sm text-sub text-nowrap">
+                    <span className="text-xs md:text-sm text-(--sub) text-nowrap">
                       Hình ảnh
                     </span>
                   </div>
@@ -569,7 +569,7 @@ const UtilDetailElements = ({
                       alt="util_image"
                       className="w-3 md:w-5"
                     />
-                    <span className="text-xs md:text-sm text-sub text-nowrap">
+                    <span className="text-xs md:text-sm text-(--sub) text-nowrap">
                       Video
                     </span>
                   </div>
@@ -579,7 +579,7 @@ const UtilDetailElements = ({
                       alt="util_image"
                       className="w-3 md:w-5"
                     />
-                    <span className="text-xs md:text-sm text-sub text-nowrap">
+                    <span className="text-xs md:text-sm text-(--sub) text-nowrap">
                       Đang cập nhật hình ảnh
                     </span>
                   </div>

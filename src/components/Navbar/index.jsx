@@ -17,7 +17,7 @@ const navList = [
   {
     id: 1,
     label: <FormattedMessage id="nav.2" defaultMessage="Tổng Quan La Pura" />,
-    href: "/",
+    href: "/toan-canh",
   },
   {
     id: 2,
@@ -132,14 +132,14 @@ const Navbar = () => {
           />
         </div>
         <button
-          className={`md:hidden w-10 h-8 bg-sub
+          className={`md:hidden w-10 h-8 bg-(--sub)
           flex justify-center items-center rounded-md`}
           onClick={() => setisMobileNav(!isMobileNav)}
         >
           {isMobileNav ? (
-            <CaretUpOutlined className="text-primary" />
+            <CaretUpOutlined className="text-(--primary)" />
           ) : (
-            <CaretDownOutlined className="text-primary" />
+            <CaretDownOutlined className="text-(--primary)" />
           )}
         </button>
       </div>
@@ -212,7 +212,7 @@ const Navbar = () => {
     //   <div className="flex-1 overflow-y-auto no-scrollbar">
     //     {/* Mobile: Hiển thị item hiện tại khi thu gọn */}
     //     {!isMobileNav && (
-    //       <div className="w-full h-12 px-5 flex items-center rounded-2xl bg-primary text-sub shadow-sm border border-primary/20">
+    //       <div className="w-full h-12 px-5 flex items-center rounded-2xl bg-(--primary) text-(--sub) shadow-sm border border-(--primary)/20">
     //         <span className="text-xs font-bold uppercase tracking-wider truncate">
     //           {navList.find((item) => item.id === activeMenu)?.label}
     //         </span>
@@ -310,7 +310,7 @@ export default Navbar;
 
       <div className="flex-1 overflow-y-auto no-scrollbar">
         {!isMobileNav && (
-          <div className="w-full h-12 px-5 flex items-center rounded-2xl bg-primary text-sub shadow-sm border border-primary/20">
+          <div className="w-full h-12 px-5 flex items-center rounded-2xl bg-(--primary) text-(--sub) shadow-sm border border-(--primary)/20">
             <span className="text-xs font-bold uppercase tracking-wider truncate">
               {navList.find((item) => item.id === activeMenu)?.label}
             </span>

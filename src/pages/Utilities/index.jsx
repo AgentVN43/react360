@@ -15,7 +15,7 @@ import SideTools from "../../components/SideTools";
 
 // import FloorDetail from "../../components/FloorDetail";
 // import SvgUtilRotaion from "../../components/SvgUtilRotaion";
-// import UtilDetail from "../../components/UtilDetail";
+import UtilDetail from "../../components/UtilDetail";
 import GuideSVG from "../../components/Guide/GuideSVG";
 import { showGuideSVG } from "../../redux/features/GuideSlice";
 import FloorDetail from "../../components/FloorDetail";
@@ -105,23 +105,23 @@ const Rotation = ({
       const id = setInterval(() => {
         previousNextFrame === 2
           ? setFrameIndex((prevFrameIndex) => {
-              const nextFrame = (prevFrameIndex % TOTAL_FRAMES) + 1;
-              if (STOP_FRAMES.includes(nextFrame)) {
-                setIsAutoRotatePreviousNextFrame(false); // Stop auto-rotate if nextFrame matches any stop frame
-                return nextFrame; // Keep the frame unchanged
-              }
-              return nextFrame;
-            })
+            const nextFrame = (prevFrameIndex % TOTAL_FRAMES) + 1;
+            if (STOP_FRAMES.includes(nextFrame)) {
+              setIsAutoRotatePreviousNextFrame(false); // Stop auto-rotate if nextFrame matches any stop frame
+              return nextFrame; // Keep the frame unchanged
+            }
+            return nextFrame;
+          })
           : setFrameIndex((prevFrameIndex) => {
-              const nextFrame =
-                prevFrameIndex - 1 <= 0 ? TOTAL_FRAMES : prevFrameIndex - 1;
-              if (STOP_FRAMES.includes(nextFrame)) {
-                setIsAutoRotatePreviousNextFrame(false); // Stop auto-rotate if nextFrame matches any stop frame
-                return nextFrame; // Keep the frame unchanged
-              }
+            const nextFrame =
+              prevFrameIndex - 1 <= 0 ? TOTAL_FRAMES : prevFrameIndex - 1;
+            if (STOP_FRAMES.includes(nextFrame)) {
+              setIsAutoRotatePreviousNextFrame(false); // Stop auto-rotate if nextFrame matches any stop frame
+              return nextFrame; // Keep the frame unchanged
+            }
 
-              return nextFrame;
-            });
+            return nextFrame;
+          });
       }, 100); // Adjust the auto-rotate speed
 
       setIntervalId(id);
@@ -294,14 +294,14 @@ const Rotation = ({
       // });
       !isMobile
         ? setDivStyle({
-            // top: `${e.clientY - 150}px`,
-            top: `25%`,
-            left: `${e.clientX + 80}px`, // Adjust the position to your liking
-          })
+          // top: `${e.clientY - 150}px`,
+          top: `25%`,
+          left: `${e.clientX + 80}px`, // Adjust the position to your liking
+        })
         : setDivStyle({
-            top: `5%`,
-            left: `30%`, // Adjust the position to your liking
-          });
+          top: `5%`,
+          left: `30%`, // Adjust the position to your liking
+        });
     };
 
     const handleMouseLeave = () => {
@@ -319,14 +319,14 @@ const Rotation = ({
       // });
       !isMobile
         ? setDivStyle({
-            // top: `${e.clientY - 150}px`,
-            top: `25%`,
-            left: `${e.clientX + 80}px`, // Adjust the position to your liking
-          })
+          // top: `${e.clientY - 150}px`,
+          top: `25%`,
+          left: `${e.clientX + 80}px`, // Adjust the position to your liking
+        })
         : setDivStyle({
-            top: `5%`,
-            left: `30%`, // Adjust the position to your liking
-          });
+          top: `5%`,
+          left: `30%`, // Adjust the position to your liking
+        });
     };
 
     const handleMouseLeaveUtil = () => {
@@ -1236,14 +1236,14 @@ const Rotation = ({
                       {hoveredUtilFloor === 0
                         ? "Tầng trệt"
                         : hoveredUtilFloor === 1
-                        ? "Tầng 1"
-                        : hoveredUtilFloor === 2
-                        ? "Tầng 3"
-                        : hoveredUtilFloor === 3
-                        ? "Tầng 20"
-                        : hoveredUtilFloor === 4
-                        ? "Tầng mái"
-                        : null}
+                          ? "Tầng 1"
+                          : hoveredUtilFloor === 2
+                            ? "Tầng 3"
+                            : hoveredUtilFloor === 3
+                              ? "Tầng 20"
+                              : hoveredUtilFloor === 4
+                                ? "Tầng mái"
+                                : null}
                     </h4>
                   </div>
 
@@ -1395,9 +1395,8 @@ const UtilitiesFilter = ({
             <div className="flex justify-center items-center md:grid md:grid-cols-2 gap-2">
               {/* hover:opacity-100 */}
               <div
-                className={`py-2 px-5 ${
-                  frameIndex === 75 ? "bg-[#FFC73C]" : "bg-(--sub)"
-                } hover:bg-[#FFC73C] rounded-lg text-white text-xs cursor-pointer`}
+                className={`py-2 px-5 ${frameIndex === 75 ? "bg-[#FFC73C]" : "bg-(--sub)"
+                  } hover:bg-[#FFC73C] rounded-lg text-white text-xs cursor-pointer`}
                 onClick={() => {
                   !isSnapping && smoothSnapToFrame(75);
                 }}
@@ -1406,9 +1405,8 @@ const UtilitiesFilter = ({
               </div>
               {/* hover:bg-[#ff7b6e] */}
               <div
-                className={`py-2 px-5 ${
-                  frameIndex === 45 ? "bg-[#ff7b6e]" : "bg-(--sub)"
-                } hover:bg-[#ff7b6e] rounded-lg text-white text-xs cursor-pointer`}
+                className={`py-2 px-5 ${frameIndex === 45 ? "bg-[#ff7b6e]" : "bg-(--sub)"
+                  } hover:bg-[#ff7b6e] rounded-lg text-white text-xs cursor-pointer`}
                 onClick={() => {
                   !isSnapping && smoothSnapToFrame(45);
                 }}
@@ -1417,9 +1415,8 @@ const UtilitiesFilter = ({
               </div>
               {/* hover:bg-[#1d9597] */}
               <div
-                className={`py-2 px-5 ${
-                  frameIndex === 15 ? "bg-[#1d9597]" : "bg-(--sub)"
-                } hover:bg-[#1d9597] rounded-lg text-white text-xs cursor-pointer`}
+                className={`py-2 px-5 ${frameIndex === 15 ? "bg-[#1d9597]" : "bg-(--sub)"
+                  } hover:bg-[#1d9597] rounded-lg text-white text-xs cursor-pointer`}
                 onClick={() => {
                   !isSnapping && smoothSnapToFrame(15);
                 }}
@@ -1428,9 +1425,8 @@ const UtilitiesFilter = ({
               </div>
               {/* hover:bg-[#7e0202] */}
               <div
-                className={`py-2 px-5 ${
-                  frameIndex === 105 ? "bg-[#7e0202]" : "bg-(--sub)"
-                } hover:bg-[#7e0202] rounded-lg text-white text-xs cursor-pointer`}
+                className={`py-2 px-5 ${frameIndex === 105 ? "bg-[#7e0202]" : "bg-(--sub)"
+                  } hover:bg-[#7e0202] rounded-lg text-white text-xs cursor-pointer`}
                 onClick={() => {
                   !isSnapping && smoothSnapToFrame(105);
                 }}
@@ -1563,9 +1559,8 @@ const Utilities = () => {
         />
       </div>
       <div
-        className={`${!iframeData.currentsence ? "block" : "hidden"} ${
-          !isVisibleUtilDetail ? "block" : "hidden"
-        }`}
+        className={`${!iframeData.currentsence ? "block" : "hidden"} ${!isVisibleUtilDetail ? "block" : "hidden"
+          }`}
       >
         <Rotation
           setIframeData={setIframeData}
@@ -1623,7 +1618,7 @@ const Utilities = () => {
               {/* {!isVisibleFloorDetail && (
                 <button
                   className={`w-10 h-10 ${
-                    !isVisibleMobileFilter ? "bg-(--sub)" : "bg-sub/60"
+                    !isVisibleMobileFilter ? "bg-(--sub)" : "bg-(--sub)/60"
                   }  flex md:hidden justify-center items-center rounded-md`}
                   onClick={() => toggleFilterVisible()}
                 >

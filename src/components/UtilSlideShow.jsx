@@ -126,13 +126,13 @@ export default function UtilSlideShow({
               />
             )}
           </div>
-          <div className="absolute top-2 right-1/2 translate-x-1/2 bg-sub text-white px-3 py-1 rounded-full text-sm">
+          <div className="absolute top-2 right-1/2 translate-x-1/2 bg-(--sub) text-white px-3 py-1 rounded-full text-sm">
             {currentIndex + 1} / {mediaUrls.length}
           </div>
           {/* Close btn */}
           <div
             className="absolute top-2 right-2 w-6 h-6 md:w-9 md:h-9 flex items-center justify-center bg-white
-          rounded-full cursor-pointer text-sub hover:bg-sub hover:text-white"
+          rounded-full cursor-pointer text-(--sub) hover:bg-(--sub) hover:text-white"
             onClick={() => setCurrentMedia(null)}
             onTouchStart={() => setCurrentMedia(null)}
           >
@@ -148,7 +148,7 @@ export default function UtilSlideShow({
 
           {/* Navigation Buttons - Responsive sizing */}
           {/* <button
-          className="absolute left-2 md:left-7 lg:fixed lg:left-[10%] bg-sub bg-opacity-40 hover:bg-opacity-60 text-white p-2 sm:p-3 rounded-full transform transition-all duration-300 hover:scale-110 ring-2 ring-primary"
+          className="absolute left-2 md:left-7 lg:fixed lg:left-[10%] bg-(--sub) bg-opacity-40 hover:bg-opacity-60 text-white p-2 sm:p-3 rounded-full transform transition-all duration-300 hover:scale-110 ring-2 ring-(--primary)"
           onClick={handlePrev}
           aria-label="Previous slide"
         >
@@ -158,19 +158,19 @@ export default function UtilSlideShow({
 
           <button
             onClick={handlePrev}
-            className="absolute md:fixed left-2 md:left-12 top-1/2 -translate-y-1/2 p-2 rounded-full hover:bg-sub hover:text-white bg-white border-none"
+            className="absolute md:fixed left-2 md:left-12 top-1/2 -translate-y-1/2 p-2 rounded-full hover:bg-(--sub) hover:text-white bg-white border-none"
           >
             <ChevronLeft size={24} />
           </button>
           <button
             onClick={handleNext}
-            className="absolute md:fixed right-2 md:right-12 top-1/2 -translate-y-1/2 p-2 rounded-full hover:bg-sub hover:text-white bg-white border-none"
+            className="absolute md:fixed right-2 md:right-12 top-1/2 -translate-y-1/2 p-2 rounded-full hover:bg-(--sub) hover:text-white bg-white border-none"
           >
             <ChevronRight size={24} />
           </button>
 
           {/* <button
-          className="absolute right-2 md:right-7 lg:fixed lg:right-[10%] bg-sub bg-opacity-40 hover:bg-opacity-60 text-white p-2 sm:p-3 rounded-full transform transition-all duration-300 hover:scale-110 ring-2 ring-primary"
+          className="absolute right-2 md:right-7 lg:fixed lg:right-[10%] bg-(--sub) bg-opacity-40 hover:bg-opacity-60 text-white p-2 sm:p-3 rounded-full transform transition-all duration-300 hover:scale-110 ring-2 ring-(--primary)"
           onClick={handleNext}
           aria-label="Next slide"
         >

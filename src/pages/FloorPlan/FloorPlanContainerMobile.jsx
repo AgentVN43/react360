@@ -50,9 +50,9 @@ const FloorPlanContainerMobile = ({
     setPathSelectedData(item);
   };
 
-//   const apartmentHoveredData = apartmentLayout.find(
-//     (item) => hoverPathData?.apartmentLayout === item.id
-//   );
+  //   const apartmentHoveredData = apartmentLayout.find(
+  //     (item) => hoverPathData?.apartmentLayout === item.id
+  //   );
 
   const handleMouseEnter = (item, e) => {
     setIsHovered(true);
@@ -76,16 +76,14 @@ const FloorPlanContainerMobile = ({
       overflow-auto bg-[#faffee] text-center"
       >
         <h1
-          className={`${
-            block === "zenia" && "font-kreey text-primary text-xl"
-          } ${block === "risa" && "text-[#5B5A5A] text-md uppercase"}  `}
+          className={`${block === "zenia" && "font-kreey text-(--primary) text-xl"
+            } ${block === "risa" && "text-[#5B5A5A] text-md uppercase"}  `}
         >
           Mặt bằng
         </h1>
         <h1
-          className={`${block === "zenia" && "text-sub font-custom2"} ${
-            block === "risa" && "text-[#FCB700] font-gliker"
-          } text-xl uppercase text-center py-2`}
+          className={`${block === "zenia" && "text-(--sub) font-custom2"} ${block === "risa" && "text-[#FCB700] font-gliker"
+            } text-xl uppercase text-center py-2`}
         >
           Tầng {selectedItem.label}
           {block === "risa" && matchedFloor.label.includes("19") && (

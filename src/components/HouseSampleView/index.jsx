@@ -29,7 +29,7 @@ const HouseSampleView = ({ apartmentLayoutItem }) => {
 
       {/* Back */}
       <button
-        className="absolute top-5 left-5 md:left-64 p-2 flex justify-center items-center text-center z-20 rounded-full bg-sub border border-white"
+        className="absolute top-5 left-5 md:left-64 p-2 flex justify-center items-center text-center z-20 rounded-full bg-(--sub) border border-white"
         onClick={() => handleBackToPlan()}
       >
         <img

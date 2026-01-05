@@ -48,11 +48,10 @@ export default function SideTools({ OrtherTools }) {
     <>
       <div className="fixed z-[55] right-2 md:right-4 top-4 flex flex-col gap-2">
         <button
-           className={`w-10 h-10 hover:bg-sub flex flex-col justify-center items-center rounded-md transition-colors ${
-             showSideTool ? "bg-sub" : "bg-opacity-60 bg-sub"
-           }`}
-           onClick={() => setShowSideTool(!showSideTool)}
-         >
+          className={`w-10 h-10 cursor-pointer hover:bg-(--sub) flex flex-col justify-center items-center rounded-md transition-colors ${showSideTool ? "bg-(--sub)" : "bg-opacity-60 bg-(--sub)"
+            }`}
+          onClick={() => setShowSideTool(!showSideTool)}
+        >
           <img
             src={iconHamburger}
             alt="fullscreen_icon"
@@ -63,9 +62,8 @@ export default function SideTools({ OrtherTools }) {
           <>
             {/* Mở/Tắt Toàn Màn Hình */}
             <button
-              className={`w-10 h-10 hover:bg-sub hidden md:flex flex-col justify-center items-center rounded-md transition-colors ${
-                isFullscreen ? "bg-sub" : "bg-opacity-60 bg-sub"
-              }`}
+              className={`w-10 h-10 cursor-pointer hover:bg-(--sub) hidden md:flex flex-col justify-center items-center rounded-md transition-colors ${isFullscreen ? "bg-(--sub)" : "bg-(--sub)/60"
+                }`}
               onClick={() => toggleFullscreen()}
             >
               <img
@@ -76,7 +74,7 @@ export default function SideTools({ OrtherTools }) {
             </button>
             {/* Mở Website */}
             <button
-              className="w-10 h-10 bg-opacity-60 bg-sub hover:bg-opacity-100 hover:bg-sub flex flex-col justify-center items-center rounded-md transition-colors"
+              className="w-10 h-10 cursor-pointer bg-(--sub)/60 hover:bg-opacity-100 hover:bg-(--sub) flex flex-col justify-center items-center rounded-md transition-colors"
               onClick={() => window.open("https://lapura.vn", "_blank")}
             >
               <img
@@ -87,7 +85,7 @@ export default function SideTools({ OrtherTools }) {
             </button>
             {/* Mở Google Map */}
             <button
-              className="w-10 h-10 bg-opacity-60 bg-sub hover:bg-opacity-100 hover:bg-sub flex flex-col justify-center items-center rounded-md transition-colors"
+              className="w-10 h-10 cursor-pointer bg-(--sub)/60 hover:bg-opacity-100 hover:bg-(--sub) flex flex-col justify-center items-center rounded-md transition-colors"
               onClick={() =>
                 window.open(
                   "https://maps.app.goo.gl/ShWz9xPYozKLc9Vr7",
@@ -103,7 +101,7 @@ export default function SideTools({ OrtherTools }) {
             </button>
             {/* Mở Ebook */}
             <button
-              className="w-10 h-10 bg-opacity-60 bg-sub hover:bg-opacity-100 hover:bg-sub flex flex-col justify-center items-center rounded-md transition-colors"
+              className={`w-10 h-10 cursor-pointer bg-(--sub)/60 hover:bg-(--sub) flex flex-col justify-center items-center rounded-md`}
               onClick={() => {
                 setIsOpenEBook(true);
               }}

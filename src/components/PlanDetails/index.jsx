@@ -41,7 +41,7 @@ const PlanDetails = ({
         className="absolute bottom-4 left-1/2 -translate-x-1/2 w-72 max-h-[420px] 
       h-auto overflow-auto bg-white/60 backdrop-blur-md border border-white/10 shadow-lg rounded-t-md space-y-2 z-40"
       >
-        <h1 className="text-sub uppercase text-base text-center font-bold pt-3">
+        <h1 className="text-(--sub) uppercase text-base text-center font-bold pt-3">
           Căn Hộ {pathSelectedData.code}
         </h1>
         <ul className="w-full h-full p-2 pt-0">
@@ -84,7 +84,7 @@ const PlanDetails = ({
 
         <button
           className={` ${apartmentLayoutItem?.frameUrl ? "flex" : "hidden"
-            } w-full bg-sub justify-center items-center hover:opacity-80`}
+            } w-full bg-(--sub) justify-center items-center hover:opacity-80`}
           onClick={() => handleActiveHouseSampleView()}
         >
           <p className="px-1 text-white text-xs">Xem VR 360</p>
@@ -104,7 +104,7 @@ const PlanDetails = ({
 
       {/* Back */}
       <button
-        className="absolute top-[20px] left-64 p-2 px-3 flex justify-center items-center text-center z-20 rounded-full bg-sub border border-white 
+        className="absolute top-[20px] left-64 p-2 px-3 flex justify-center items-center text-center z-20 rounded-full bg-(--sub) border border-white 
         cursor-pointer hover:opacity-80"
         onClick={() => handleBackToPlan()}
       >

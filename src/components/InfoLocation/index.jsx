@@ -10,7 +10,7 @@ export default function InfoLocation() {
           className="w-full h-full object-contain"
         />
         {/* <h1 className="font-1kreey text-4xl text-[#a8ce38]">Thành phố</h1>
-        <h1 className="text-sub text-[42px] tracking-tighter uppercase py-2 font-custom2 mb-2 pl-6">
+        <h1 className="text-(--sub) text-[42px] tracking-tighter uppercase py-2 font-custom2 mb-2 pl-6">
           SIÊU KẾT NỐI
         </h1>
         <div className="grid grid-cols-[auto_1fr] gap-3 pl-6 pr-4">

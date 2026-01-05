@@ -3,7 +3,7 @@ import loading_border from "../../assets/images/loading-border.png";
 import lapura_logo from "../../assets/logo/big_logo.png";
 import "./ErrorPage.scss";
 
-const basePath =import.meta.env.REACT_APP_BASE_PATH;
+const basePath = import.meta.env.REACT_APP_BASE_PATH;
 
 const ErrorPage = () => {
   const navigate = useNavigate();
@@ -42,7 +42,7 @@ const ErrorPage = () => {
             Trang bạn đang tìm kiếm không tồn tại.
           </p>
           <button
-            className="flex px-10 bg-sub justify-center items-center gap-5"
+            className="flex px-10 bg-(--sub) justify-center items-center gap-5"
             onClick={() => navigate(`${basePath}/toan-canh`)}
           >
             <p className="text-white font-medium">Về lại trang chủ</p>

@@ -46,8 +46,8 @@ const UtilTret = ({ hoveredUtilItem, scale, setCurrentMedia }) => {
           className={` ${!plan_filter[0].itemsUtilFilter[0].items[1 - 1].isMedia
             ? "fill-[#a5bc99] hover:fill-[#a5bc99]"
             : hoveredUtilItem === 1
-              ? "fill-sub"
-              : "fill-[#ffc300] hover:fill-sub cursor-pointer"
+              ? "fill-(--sub)"
+              : "fill-[#ffc300] hover:fill-(--sub) cursor-pointer"
             }`}
         >
           <circle cx="987" cy="792" r="14.75" stroke="white" stroke-width="0.5">
@@ -88,8 +88,8 @@ const UtilTret = ({ hoveredUtilItem, scale, setCurrentMedia }) => {
           className={` ${!plan_filter[0].itemsUtilFilter[0].items[2 - 1].isMedia
             ? "fill-[#a5bc99] hover:fill-[#a5bc99]"
             : hoveredUtilItem === 2
-              ? "fill-sub"
-              : "fill-[#ffc300] hover:fill-sub cursor-pointer"
+              ? "fill-(--sub)"
+              : "fill-[#ffc300] hover:fill-(--sub) cursor-pointer"
             }`}
         >
           <circle cx="957" cy="720" r="14.75" stroke="white" stroke-width="0.5">
@@ -242,8 +242,8 @@ const UtilTret = ({ hoveredUtilItem, scale, setCurrentMedia }) => {
           className={` ${!plan_filter[0].itemsUtilFilter[0].items[3 - 1].isMedia
             ? "fill-[#a5bc99] hover:fill-[#a5bc99]"
             : hoveredUtilItem === 3
-              ? "fill-sub"
-              : "fill-[#ffc300] hover:fill-sub cursor-pointer"
+              ? "fill-(--sub)"
+              : "fill-[#ffc300] hover:fill-(--sub) cursor-pointer"
             }`}
         >
           <circle cx="989" cy="573" r="14.75" stroke="white" stroke-width="0.5">
@@ -317,8 +317,8 @@ const UtilTret = ({ hoveredUtilItem, scale, setCurrentMedia }) => {
           className={` ${!plan_filter[0].itemsUtilFilter[0].items[4 - 1].isMedia
             ? "fill-[#a5bc99] hover:fill-[#a5bc99]"
             : hoveredUtilItem === 4
-              ? "fill-sub"
-              : "fill-[#ffc300] hover:fill-sub cursor-pointer"
+              ? "fill-(--sub)"
+              : "fill-[#ffc300] hover:fill-(--sub) cursor-pointer"
             }`}
         >
           <circle cx="987" cy="444" r="14.75" stroke="white" stroke-width="0.5">
@@ -359,8 +359,8 @@ const UtilTret = ({ hoveredUtilItem, scale, setCurrentMedia }) => {
           className={` ${!plan_filter[0].itemsUtilFilter[0].items[5 - 1].isMedia
             ? "fill-[#a5bc99] hover:fill-[#a5bc99]"
             : hoveredUtilItem === 5
-              ? "fill-sub"
-              : "fill-[#ffc300] hover:fill-sub cursor-pointer"
+              ? "fill-(--sub)"
+              : "fill-[#ffc300] hover:fill-(--sub) cursor-pointer"
             }`}
         >
           <circle cx="989" cy="361" r="14.75" stroke="white" stroke-width="0.5">
@@ -401,8 +401,8 @@ const UtilTret = ({ hoveredUtilItem, scale, setCurrentMedia }) => {
           className={` ${!plan_filter[0].itemsUtilFilter[0].items[6 - 1].isMedia
             ? "fill-[#a5bc99] hover:fill-[#a5bc99]"
             : hoveredUtilItem === 6
-              ? "fill-sub"
-              : "fill-[#ffc300] hover:fill-sub cursor-pointer"
+              ? "fill-(--sub)"
+              : "fill-[#ffc300] hover:fill-(--sub) cursor-pointer"
             }`}
         >
           <circle cx="962" cy="264" r="14.75" stroke="white" stroke-width="0.5">
@@ -443,8 +443,8 @@ const UtilTret = ({ hoveredUtilItem, scale, setCurrentMedia }) => {
           className={` ${!plan_filter[0].itemsUtilFilter[0].items[7 - 1].isMedia
             ? "fill-[#a5bc99] hover:fill-[#a5bc99]"
             : hoveredUtilItem === 7
-              ? "fill-sub"
-              : "fill-[#ffc300] hover:fill-sub cursor-pointer"
+              ? "fill-(--sub)"
+              : "fill-[#ffc300] hover:fill-(--sub) cursor-pointer"
             }`}
         >
           <circle cx="690" cy="547" r="14.75" stroke="white" stroke-width="0.5">
@@ -551,8 +551,8 @@ const UtilTret = ({ hoveredUtilItem, scale, setCurrentMedia }) => {
           className={` ${!plan_filter[0].itemsUtilFilter[0].items[8 - 1].isMedia
             ? "fill-[#a5bc99] hover:fill-[#a5bc99]"
             : hoveredUtilItem === 8
-              ? "fill-sub"
-              : "fill-[#ffc300] hover:fill-sub cursor-pointer"
+              ? "fill-(--sub)"
+              : "fill-[#ffc300] hover:fill-(--sub) cursor-pointer"
             }`}
         >
           <circle cx="818" cy="753" r="14.75" stroke="white" stroke-width="0.5">
@@ -593,8 +593,8 @@ const UtilTret = ({ hoveredUtilItem, scale, setCurrentMedia }) => {
           className={` ${!plan_filter[0].itemsUtilFilter[0].items[9 - 1].isMedia
             ? "fill-[#a5bc99] hover:fill-[#a5bc99]"
             : hoveredUtilItem === 9
-              ? "fill-sub"
-              : "fill-[#ffc300] hover:fill-sub cursor-pointer"
+              ? "fill-(--sub)"
+              : "fill-[#ffc300] hover:fill-(--sub) cursor-pointer"
             }`}
         >
           <circle
@@ -642,8 +642,8 @@ const UtilTret = ({ hoveredUtilItem, scale, setCurrentMedia }) => {
           className={` ${!plan_filter[0].itemsUtilFilter[0].items[10 - 1].isMedia
             ? "fill-[#a5bc99] hover:fill-[#a5bc99]"
             : hoveredUtilItem === 10
-              ? "fill-sub"
-              : "fill-[#ffc300] hover:fill-sub cursor-pointer"
+              ? "fill-(--sub)"
+              : "fill-[#ffc300] hover:fill-(--sub) cursor-pointer"
             }`}
         >
           <circle cx="809" cy="667" r="14.75" stroke="white" stroke-width="0.5">
@@ -684,8 +684,8 @@ const UtilTret = ({ hoveredUtilItem, scale, setCurrentMedia }) => {
           className={` ${!plan_filter[0].itemsUtilFilter[0].items[11 - 1].isMedia
             ? "fill-[#a5bc99] hover:fill-[#a5bc99]"
             : hoveredUtilItem === 11
-              ? "fill-sub"
-              : "fill-[#ffc300] hover:fill-sub cursor-pointer"
+              ? "fill-(--sub)"
+              : "fill-[#ffc300] hover:fill-(--sub) cursor-pointer"
             }`}
         >
           <circle
@@ -765,8 +765,8 @@ const UtilTret = ({ hoveredUtilItem, scale, setCurrentMedia }) => {
           className={` ${!plan_filter[0].itemsUtilFilter[0].items[12 - 1].isMedia
             ? "fill-[#a5bc99] hover:fill-[#a5bc99]"
             : hoveredUtilItem === 12
-              ? "fill-sub"
-              : "fill-[#ffc300] hover:fill-sub cursor-pointer"
+              ? "fill-(--sub)"
+              : "fill-[#ffc300] hover:fill-(--sub) cursor-pointer"
             }`}
         >
           <circle cx="809" cy="603" r="14.75" stroke="white" stroke-width="0.5">
@@ -807,8 +807,8 @@ const UtilTret = ({ hoveredUtilItem, scale, setCurrentMedia }) => {
           className={` ${!plan_filter[0].itemsUtilFilter[0].items[13 - 1].isMedia
             ? "fill-[#a5bc99] hover:fill-[#a5bc99]"
             : hoveredUtilItem === 13
-              ? "fill-sub"
-              : "fill-[#ffc300] hover:fill-sub cursor-pointer"
+              ? "fill-(--sub)"
+              : "fill-[#ffc300] hover:fill-(--sub) cursor-pointer"
             }`}
         >
           <circle cx="839" cy="544" r="14.75" stroke="white" stroke-width="0.5">
@@ -849,8 +849,8 @@ const UtilTret = ({ hoveredUtilItem, scale, setCurrentMedia }) => {
           className={` ${!plan_filter[0].itemsUtilFilter[0].items[14 - 1].isMedia
             ? "fill-[#a5bc99] hover:fill-[#a5bc99]"
             : hoveredUtilItem === 14
-              ? "fill-sub"
-              : "fill-[#ffc300] hover:fill-sub cursor-pointer"
+              ? "fill-(--sub)"
+              : "fill-[#ffc300] hover:fill-(--sub) cursor-pointer"
             }`}
         >
           <circle cx="818" cy="469" r="14.75" stroke="white" stroke-width="0.5">
@@ -891,8 +891,8 @@ const UtilTret = ({ hoveredUtilItem, scale, setCurrentMedia }) => {
           className={` ${!plan_filter[0].itemsUtilFilter[0].items[15 - 1].isMedia
             ? "fill-[#a5bc99] hover:fill-[#a5bc99]"
             : hoveredUtilItem === 15
-              ? "fill-sub"
-              : "fill-[#ffc300] hover:fill-sub cursor-pointer"
+              ? "fill-(--sub)"
+              : "fill-[#ffc300] hover:fill-(--sub) cursor-pointer"
             }`}
         >
           <circle
@@ -939,8 +939,8 @@ const UtilTret = ({ hoveredUtilItem, scale, setCurrentMedia }) => {
           className={` ${!plan_filter[0].itemsUtilFilter[0].items[16 - 1].isMedia
             ? "fill-[#a5bc99] hover:fill-[#a5bc99]"
             : hoveredUtilItem === 16
-              ? "fill-sub"
-              : "fill-[#ffc300] hover:fill-sub cursor-pointer"
+              ? "fill-(--sub)"
+              : "fill-[#ffc300] hover:fill-(--sub) cursor-pointer"
             }`}
         >
           <circle
@@ -987,8 +987,8 @@ const UtilTret = ({ hoveredUtilItem, scale, setCurrentMedia }) => {
           className={` ${!plan_filter[0].itemsUtilFilter[0].items[17 - 1].isMedia
             ? "fill-[#a5bc99] hover:fill-[#a5bc99]"
             : hoveredUtilItem === 17
-              ? "fill-sub"
-              : "fill-[#ffc300] hover:fill-sub cursor-pointer"
+              ? "fill-(--sub)"
+              : "fill-[#ffc300] hover:fill-(--sub) cursor-pointer"
             }`}
         >
           <circle
@@ -1035,8 +1035,8 @@ const UtilTret = ({ hoveredUtilItem, scale, setCurrentMedia }) => {
           className={` ${!plan_filter[0].itemsUtilFilter[0].items[18 - 1].isMedia
             ? "fill-[#a5bc99] hover:fill-[#a5bc99]"
             : hoveredUtilItem === 18
-              ? "fill-sub"
-              : "fill-[#ffc300] hover:fill-sub cursor-pointer"
+              ? "fill-(--sub)"
+              : "fill-[#ffc300] hover:fill-(--sub) cursor-pointer"
             }`}
         >
           <circle
@@ -1083,8 +1083,8 @@ const UtilTret = ({ hoveredUtilItem, scale, setCurrentMedia }) => {
           className={` ${!plan_filter[0].itemsUtilFilter[0].items[19 - 1].isMedia
             ? "fill-[#a5bc99] hover:fill-[#a5bc99]"
             : hoveredUtilItem === 19
-              ? "fill-sub"
-              : "fill-[#ffc300] hover:fill-sub cursor-pointer"
+              ? "fill-(--sub)"
+              : "fill-[#ffc300] hover:fill-(--sub) cursor-pointer"
             }`}
         >
           <circle
@@ -1170,8 +1170,8 @@ const UtilTret = ({ hoveredUtilItem, scale, setCurrentMedia }) => {
           className={` ${!plan_filter[0].itemsUtilFilter[0].items[20 - 1].isMedia
             ? "fill-[#a5bc99] hover:fill-[#a5bc99]"
             : hoveredUtilItem === 20
-              ? "fill-sub"
-              : "fill-[#ffc300] hover:fill-sub cursor-pointer"
+              ? "fill-(--sub)"
+              : "fill-[#ffc300] hover:fill-(--sub) cursor-pointer"
             }`}
         >
           <circle
@@ -1218,8 +1218,8 @@ const UtilTret = ({ hoveredUtilItem, scale, setCurrentMedia }) => {
           className={` ${!plan_filter[0].itemsUtilFilter[0].items[21 - 1].isMedia
             ? "fill-[#a5bc99] hover:fill-[#a5bc99]"
             : hoveredUtilItem === 21
-              ? "fill-sub"
-              : "fill-[#ffc300] hover:fill-sub cursor-pointer"
+              ? "fill-(--sub)"
+              : "fill-[#ffc300] hover:fill-(--sub) cursor-pointer"
             }`}
         >
           <circle
@@ -1300,8 +1300,8 @@ const UtilTret = ({ hoveredUtilItem, scale, setCurrentMedia }) => {
           className={` ${!plan_filter[0].itemsUtilFilter[0].items[22 - 1].isMedia
             ? "fill-[#a5bc99] hover:fill-[#a5bc99]"
             : hoveredUtilItem === 22
-              ? "fill-sub"
-              : "fill-[#ffc300] hover:fill-sub cursor-pointer"
+              ? "fill-(--sub)"
+              : "fill-[#ffc300] hover:fill-(--sub) cursor-pointer"
             }`}
         >
           <circle cx="670" cy="851" r="14.75" stroke="white" stroke-width="0.5">

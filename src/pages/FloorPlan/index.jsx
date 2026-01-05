@@ -63,7 +63,7 @@ const basePath = import.meta.env.REACT_APP_BASE_PATH;
 //     >
 //       <div className={`${isVisibleFilter ? "block" : "hidden"}`}>
 //         <div className="mt-20 mb-2 px-2 md:mt-0 w-full h-auto md:h-full gap-1 text-center">
-//           <h2 className="mb-1 text-sm font-bold text-sub hidden md:inline-block">
+//           <h2 className="mb-1 text-sm font-bold text-(--sub) hidden md:inline-block">
 //             CÁC TÒA
 //           </h2>
 //           <div className="grid grid-cols-2 gap-2">
@@ -92,11 +92,11 @@ const basePath = import.meta.env.REACT_APP_BASE_PATH;
 //               Risa
 //             </div>
 //             {/* hover:bg-[#1d9597] */}
-//             <div className="py-2 bg-sub rounded-lg text-white text-xs cursor-pointer opacity-30">
+//             <div className="py-2 bg-(--sub) rounded-lg text-white text-xs cursor-pointer opacity-30">
 //               Vista
 //             </div>
 //             {/* hover:bg-[#7e0202] */}
-//             <div className="py-2 bg-sub rounded-lg text-white text-xs cursor-pointer opacity-30">
+//             <div className="py-2 bg-(--sub) rounded-lg text-white text-xs cursor-pointer opacity-30">
 //               Lira
 //             </div>
 //           </div>
@@ -105,7 +105,7 @@ const basePath = import.meta.env.REACT_APP_BASE_PATH;
 //         <div className="block md:hidden">
 //           {/* Back */}
 //           <button
-//             className="absolute top-5 left-5 p-2 flex md:hidden justify-center items-center text-center z-20 rounded-full bg-sub border border-white"
+//             className="absolute top-5 left-5 p-2 flex md:hidden justify-center items-center text-center z-20 rounded-full bg-(--sub) border border-white"
 //             onClick={() => setisVisibleMobileFilter(!isVisibleMobileFilter)}
 //           >
 //             <img
@@ -114,7 +114,7 @@ const basePath = import.meta.env.REACT_APP_BASE_PATH;
 //               className="w-5 h-5 object-contain cursor-pointer"
 //             />
 //           </button>
-//           <div className="absolute top-4 left-1/2 -translate-x-1/2 p-2 text-sub font-bold text-base flex justify-center items-center text-center z-20">
+//           <div className="absolute top-4 left-1/2 -translate-x-1/2 p-2 text-(--sub) font-bold text-base flex justify-center items-center text-center z-20">
 //             Bộ lọc
 //           </div>
 //         </div>
@@ -130,9 +130,9 @@ const basePath = import.meta.env.REACT_APP_BASE_PATH;
 //                   key={indx}
 //                   className={`flex justify-center items-center text-center hover:cursor-pointer ${
 //                     item.id === activeFilterItemNumber
-//                       ? "bg-primary text-sub"
-//                       : "bg-sub text-white"
-//                   } w-full h-8 md:h-7 text-xs rounded-lg hover:bg-primary hover:text-sub`}
+//                       ? "bg-(--primary) text-(--sub)"
+//                       : "bg-(--sub) text-white"
+//                   } w-full h-8 md:h-7 text-xs rounded-lg hover:bg-(--primary) hover:text-(--sub)`}
 //                   onClick={() => handleActiveFilterItemNumber(item)}
 //                 >
 //                   <h4 className="uppercase font-medium">Tầng {item.label}</h4>
@@ -144,7 +144,7 @@ const basePath = import.meta.env.REACT_APP_BASE_PATH;
 
 //       {/* Nút thu gọn */}
 //       <div
-//         className="hidden md:block bg-primary px-10 rounded-md mt-2 text-sub w-max mx-auto hover:cursor-pointer"
+//         className="hidden md:block bg-(--primary) px-10 rounded-md mt-2 text-(--sub) w-max mx-auto hover:cursor-pointer"
 //         onClick={() => setIsVisibleFilter(!isVisibleFilter)}
 //       >
 //         {isVisibleFilter ? <CaretUpOutlined /> : <CaretDownOutlined />}
@@ -514,9 +514,8 @@ const FloorPlan = () => {
             <>
               {/* Mở/Tắt Filter */}
               <button
-                className={`w-10 h-10 ${
-                  !isVisibleMobileFilter ? "bg-sub" : "bg-sub/60"
-                }  flex md:hidden justify-center items-center rounded-md`}
+                className={`w-10 h-10 ${!isVisibleMobileFilter ? "bg-(--sub)" : "bg-(--sub)/60"
+                  }  flex md:hidden justify-center items-center rounded-md`}
                 onClick={() => toggleFilterVisible()}
               >
                 <svg

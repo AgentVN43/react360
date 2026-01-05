@@ -70,14 +70,14 @@ const PopUpImageUtil = ({ currentImage, imagesPopUp, setIsShowPopUp }) => {
         <button
           onClick={handlePrevious}
           className="absolute md:fixed left-2 md:left-12 top-1/2 -translate-y-1/2 p-2 rounded-full 
-          md:hover:bg-sub md:hover:text-white bg-sub text-white md:text-slate-800 md:bg-white border-none"
+          md:hover:bg-(--sub) md:hover:text-white bg-(--sub) text-white md:text-slate-800 md:bg-white border-none"
         >
           <ChevronLeft size={24} />
         </button>
         <button
           onClick={handleNext}
           className="absolute md:fixed right-2 md:right-12 top-1/2 -translate-y-1/2 p-2 rounded-full 
-          md:hover:bg-sub md:hover:text-white bg-sub text-white md:text-slate-800 md:bg-white border-none"
+          md:hover:bg-(--sub) md:hover:text-white bg-(--sub) text-white md:text-slate-800 md:bg-white border-none"
         >
           <ChevronRight size={24} />
         </button>
@@ -89,7 +89,7 @@ const PopUpImageUtil = ({ currentImage, imagesPopUp, setIsShowPopUp }) => {
         {/* Close btn */}
         <div
           className="absolute top-2 right-2 w-6 h-6 md:w-9 md:h-9 flex items-center justify-center bg-white
-          rounded-full cursor-pointer text-sub hover:bg-sub hover:text-white"
+          rounded-full cursor-pointer text-(--sub) hover:bg-(--sub) hover:text-white"
           onClick={() => setIsShowPopUp(false)}
           onTouchStart={() => setIsShowPopUp(false)}
         >

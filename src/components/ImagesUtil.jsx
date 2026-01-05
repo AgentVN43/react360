@@ -180,7 +180,7 @@ const ImagesUtil = ({ block, floor, isMobile }) => {
               alt="gallery-img"
               loading="lazy"
             />
-            <p className="max-w-[90%] w-max group-hover:opacity-0 group-hover:-translate-x-5 translate-x-0 opacity-1 transition-all duration-300 absolute top-[80%] left-5 uppercase rounded-r-full font-semibold bg-sub/80 py-2 px-4 before:border-2  before:border-white before:absolute before:left-0 before:h-full before:top-0">
+            <p className="max-w-[90%] w-max group-hover:opacity-0 group-hover:-translate-x-5 translate-x-0 opacity-1 transition-all duration-300 absolute top-[80%] left-5 uppercase rounded-r-full font-semibold bg-(--sub)/80 py-2 px-4 before:border-2  before:border-white before:absolute before:left-0 before:h-full before:top-0">
               <span className="bg-gradient-to-r from-white via-white to-white bg-clip-text text-transparent text-xs md:text-sm font-bold">
                 {item.title}
               </span>
@@ -193,7 +193,7 @@ const ImagesUtil = ({ block, floor, isMobile }) => {
                   {item.title}
                 </h4>
                 <button
-                  className="p-1 px-4 rounded-full border-2 border-sub text-white bg-gradient-to-r from-sub to-sub hover:from-sub hover:to-sub shadow-xl hover:shadow-sub/50 font-semibold"
+                  className="p-1 px-4 rounded-full border-2 border-(--sub) text-white bg-gradient-to-r from-(--sub) to-(--sub) hover:from-(--sub) hover:to-(--sub) shadow-xl hover:shadow-(--sub)/50 font-semibold"
                   onClick={() => handleSetActiveGalleryIndex(index)}
                 >
                   Xem thêm

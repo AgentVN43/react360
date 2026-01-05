@@ -30,7 +30,7 @@ const PlanDetailsMobile = ({
       {/* Back */}
       <div>
         <button
-          className="absolute top-5 left-5 p-2 flex md:hidden justify-center items-center text-center z-20 rounded-full bg-sub border border-white"
+          className="absolute top-5 left-5 p-2 flex md:hidden justify-center items-center text-center z-20 rounded-full bg-(--sub) border border-white"
           onClick={() => handleBackToPlan()}
         >
           <img
@@ -102,7 +102,7 @@ const PlanDetailsMobile = ({
 
           <button
             className={` ${apartmentLayoutItem?.frameUrl ? "flex" : "hidden"
-              } w-full bg-sub justify-center items-center hover:bg-primary hover:text-sub`}
+              } w-full bg-(--sub) justify-center items-center hover:bg-(--primary) hover:text-(--sub)`}
             onClick={() => handleActiveHouseSampleView()}
           >
             <p className="px-1 text-white text-xs">Xem VR 360</p>

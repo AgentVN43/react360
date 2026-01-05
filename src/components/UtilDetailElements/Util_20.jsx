@@ -35,10 +35,10 @@ const Util20 = ({ hoveredUtilItem, scale, setCurrentMedia }) => {
       >
         <g
           className={`${!plan_filter[0].itemsUtilFilter[3].items[1 - 1].isMedia
-              ? "fill-[#a5bc99] hover:fill-[#a5bc99]"
-              : hoveredUtilItem === 1
-                ? "fill-sub"
-                : "fill-[#ffc300] hover:fill-sub cursor-pointer"
+            ? "fill-[#a5bc99] hover:fill-[#a5bc99]"
+            : hoveredUtilItem === 1
+              ? "fill-(--sub)"
+              : "fill-[#ffc300] hover:fill-(--sub) cursor-pointer"
             }`}
         >
           <circle cx="988" cy="555" r="14.75" stroke="white" stroke-width="0.5">
@@ -77,10 +77,10 @@ const Util20 = ({ hoveredUtilItem, scale, setCurrentMedia }) => {
         </g>
         <g
           className={`${!plan_filter[0].itemsUtilFilter[3].items[2 - 1].isMedia
-              ? "fill-[#a5bc99] hover:fill-[#a5bc99]"
-              : hoveredUtilItem === 2
-                ? "fill-sub"
-                : "fill-[#ffc300] hover:fill-sub cursor-pointer"
+            ? "fill-[#a5bc99] hover:fill-[#a5bc99]"
+            : hoveredUtilItem === 2
+              ? "fill-(--sub)"
+              : "fill-[#ffc300] hover:fill-(--sub) cursor-pointer"
             }`}
         >
           <circle cx="875" cy="560" r="14.75" stroke="white" stroke-width="0.5">
@@ -119,10 +119,10 @@ const Util20 = ({ hoveredUtilItem, scale, setCurrentMedia }) => {
         </g>
         <g
           className={`${!plan_filter[0].itemsUtilFilter[3].items[3 - 1].isMedia
-              ? "fill-[#a5bc99] hover:fill-[#a5bc99]"
-              : hoveredUtilItem === 3
-                ? "fill-sub"
-                : "fill-[#ffc300] hover:fill-sub cursor-pointer"
+            ? "fill-[#a5bc99] hover:fill-[#a5bc99]"
+            : hoveredUtilItem === 3
+              ? "fill-(--sub)"
+              : "fill-[#ffc300] hover:fill-(--sub) cursor-pointer"
             }`}
         >
           <circle cx="984" cy="449" r="14.75" stroke="white" stroke-width="0.5">
@@ -162,10 +162,10 @@ const Util20 = ({ hoveredUtilItem, scale, setCurrentMedia }) => {
 
         <g
           className={`${!plan_filter[0].itemsUtilFilter[3].items[4 - 1].isMedia
-              ? "fill-[#a5bc99] hover:fill-[#a5bc99]"
-              : hoveredUtilItem === 4
-                ? "fill-sub"
-                : "fill-[#ffc300] hover:fill-sub cursor-pointer"
+            ? "fill-[#a5bc99] hover:fill-[#a5bc99]"
+            : hoveredUtilItem === 4
+              ? "fill-(--sub)"
+              : "fill-[#ffc300] hover:fill-(--sub) cursor-pointer"
             }`}
         >
           <circle
@@ -210,10 +210,10 @@ const Util20 = ({ hoveredUtilItem, scale, setCurrentMedia }) => {
         </g>
         <g
           className={`${!plan_filter[0].itemsUtilFilter[3].items[5 - 1].isMedia
-              ? "fill-[#a5bc99] hover:fill-[#a5bc99]"
-              : hoveredUtilItem === 5
-                ? "fill-sub"
-                : "fill-[#ffc300] hover:fill-sub cursor-pointer"
+            ? "fill-[#a5bc99] hover:fill-[#a5bc99]"
+            : hoveredUtilItem === 5
+              ? "fill-(--sub)"
+              : "fill-[#ffc300] hover:fill-(--sub) cursor-pointer"
             }`}
         >
           <circle cx="824" cy="571" r="14.75" stroke="white" stroke-width="0.5">
@@ -252,10 +252,10 @@ const Util20 = ({ hoveredUtilItem, scale, setCurrentMedia }) => {
         </g>
         <g
           className={`${!plan_filter[0].itemsUtilFilter[3].items[6 - 1].isMedia
-              ? "fill-[#a5bc99] hover:fill-[#a5bc99]"
-              : hoveredUtilItem === 6
-                ? "fill-sub"
-                : "fill-[#ffc300] hover:fill-sub cursor-pointer"
+            ? "fill-[#a5bc99] hover:fill-[#a5bc99]"
+            : hoveredUtilItem === 6
+              ? "fill-(--sub)"
+              : "fill-[#ffc300] hover:fill-(--sub) cursor-pointer"
             }`}
         >
           <circle cx="868" cy="464" r="14.75" stroke="white" stroke-width="0.5">
@@ -294,10 +294,10 @@ const Util20 = ({ hoveredUtilItem, scale, setCurrentMedia }) => {
         </g>
         <g
           className={`${!plan_filter[0].itemsUtilFilter[3].items[7 - 1].isMedia
-              ? "fill-[#a5bc99] hover:fill-[#a5bc99]"
-              : hoveredUtilItem === 7
-                ? "fill-sub"
-                : "fill-[#ffc300] hover:fill-sub cursor-pointer"
+            ? "fill-[#a5bc99] hover:fill-[#a5bc99]"
+            : hoveredUtilItem === 7
+              ? "fill-(--sub)"
+              : "fill-[#ffc300] hover:fill-(--sub) cursor-pointer"
             }`}
         >
           <circle
@@ -342,10 +342,10 @@ const Util20 = ({ hoveredUtilItem, scale, setCurrentMedia }) => {
         </g>
         <g
           className={`${!plan_filter[0].itemsUtilFilter[3].items[8 - 1].isMedia
-              ? "fill-[#a5bc99] hover:fill-[#a5bc99]"
-              : hoveredUtilItem === 8
-                ? "fill-sub"
-                : "fill-[#ffc300] hover:fill-sub cursor-pointer"
+            ? "fill-[#a5bc99] hover:fill-[#a5bc99]"
+            : hoveredUtilItem === 8
+              ? "fill-(--sub)"
+              : "fill-[#ffc300] hover:fill-(--sub) cursor-pointer"
             }`}
         >
           <circle
@@ -390,10 +390,10 @@ const Util20 = ({ hoveredUtilItem, scale, setCurrentMedia }) => {
         </g>
         <g
           className={`${!plan_filter[0].itemsUtilFilter[3].items[9 - 1].isMedia
-              ? "fill-[#a5bc99] hover:fill-[#a5bc99]"
-              : hoveredUtilItem === 9
-                ? "fill-sub"
-                : "fill-[#ffc300] hover:fill-sub cursor-pointer"
+            ? "fill-[#a5bc99] hover:fill-[#a5bc99]"
+            : hoveredUtilItem === 9
+              ? "fill-(--sub)"
+              : "fill-[#ffc300] hover:fill-(--sub) cursor-pointer"
             }`}
         >
           <circle
@@ -439,10 +439,10 @@ const Util20 = ({ hoveredUtilItem, scale, setCurrentMedia }) => {
 
         <g
           className={`${!plan_filter[0].itemsUtilFilter[3].items[10 - 1].isMedia
-              ? "fill-[#a5bc99] hover:fill-[#a5bc99]"
-              : hoveredUtilItem === 10
-                ? "fill-sub"
-                : "fill-[#ffc300] hover:fill-sub cursor-pointer"
+            ? "fill-[#a5bc99] hover:fill-[#a5bc99]"
+            : hoveredUtilItem === 10
+              ? "fill-(--sub)"
+              : "fill-[#ffc300] hover:fill-(--sub) cursor-pointer"
             }`}
         >
           <circle
@@ -487,10 +487,10 @@ const Util20 = ({ hoveredUtilItem, scale, setCurrentMedia }) => {
         </g>
         <g
           className={`${!plan_filter[0].itemsUtilFilter[3].items[11 - 1].isMedia
-              ? "fill-[#a5bc99] hover:fill-[#a5bc99]"
-              : hoveredUtilItem === 11
-                ? "fill-sub"
-                : "fill-[#ffc300] hover:fill-sub cursor-pointer"
+            ? "fill-[#a5bc99] hover:fill-[#a5bc99]"
+            : hoveredUtilItem === 11
+              ? "fill-(--sub)"
+              : "fill-[#ffc300] hover:fill-(--sub) cursor-pointer"
             }`}
         >
           <circle cx="598" cy="826" r="14.75" stroke="white" stroke-width="0.5">
@@ -595,10 +595,10 @@ const Util20 = ({ hoveredUtilItem, scale, setCurrentMedia }) => {
         </g>
         <g
           className={`${!plan_filter[0].itemsUtilFilter[3].items[12 - 1].isMedia
-              ? "fill-[#a5bc99] hover:fill-[#a5bc99]"
-              : hoveredUtilItem === 12
-                ? "fill-sub"
-                : "fill-[#ffc300] hover:fill-sub cursor-pointer"
+            ? "fill-[#a5bc99] hover:fill-[#a5bc99]"
+            : hoveredUtilItem === 12
+              ? "fill-(--sub)"
+              : "fill-[#ffc300] hover:fill-(--sub) cursor-pointer"
             }`}
         >
           <circle cx="583" cy="173" r="14.75" stroke="white" stroke-width="0.5">
@@ -671,10 +671,10 @@ const Util20 = ({ hoveredUtilItem, scale, setCurrentMedia }) => {
 
         <g
           className={`${!plan_filter[0].itemsUtilFilter[3].items[13 - 1].isMedia
-              ? "fill-[#a5bc99] hover:fill-[#a5bc99]"
-              : hoveredUtilItem === 13
-                ? "fill-sub"
-                : "fill-[#ffc300] hover:fill-sub cursor-pointer"
+            ? "fill-[#a5bc99] hover:fill-[#a5bc99]"
+            : hoveredUtilItem === 13
+              ? "fill-(--sub)"
+              : "fill-[#ffc300] hover:fill-(--sub) cursor-pointer"
             }`}
         >
           <circle cx="711" cy="329" r="14.75" stroke="white" stroke-width="0.5">
@@ -747,10 +747,10 @@ const Util20 = ({ hoveredUtilItem, scale, setCurrentMedia }) => {
 
         <g
           className={`${!plan_filter[0].itemsUtilFilter[3].items[14 - 1].isMedia
-              ? "fill-[#a5bc99] hover:fill-[#a5bc99]"
-              : hoveredUtilItem === 14
-                ? "fill-sub"
-                : "fill-[#ffc300] hover:fill-sub cursor-pointer"
+            ? "fill-[#a5bc99] hover:fill-[#a5bc99]"
+            : hoveredUtilItem === 14
+              ? "fill-(--sub)"
+              : "fill-[#ffc300] hover:fill-(--sub) cursor-pointer"
             }`}
         >
           <circle
@@ -796,10 +796,10 @@ const Util20 = ({ hoveredUtilItem, scale, setCurrentMedia }) => {
 
         <g
           className={`${!plan_filter[0].itemsUtilFilter[3].items[15 - 1].isMedia
-              ? "fill-[#a5bc99] hover:fill-[#a5bc99]"
-              : hoveredUtilItem === 15
-                ? "fill-sub"
-                : "fill-[#ffc300] hover:fill-sub cursor-pointer"
+            ? "fill-[#a5bc99] hover:fill-[#a5bc99]"
+            : hoveredUtilItem === 15
+              ? "fill-(--sub)"
+              : "fill-[#ffc300] hover:fill-(--sub) cursor-pointer"
             }`}
         >
           <circle
@@ -844,10 +844,10 @@ const Util20 = ({ hoveredUtilItem, scale, setCurrentMedia }) => {
         </g>
         <g
           className={`${!plan_filter[0].itemsUtilFilter[3].items[16 - 1].isMedia
-              ? "fill-[#a5bc99] hover:fill-[#a5bc99]"
-              : hoveredUtilItem === 16
-                ? "fill-sub"
-                : "fill-[#ffc300] hover:fill-sub cursor-pointer"
+            ? "fill-[#a5bc99] hover:fill-[#a5bc99]"
+            : hoveredUtilItem === 16
+              ? "fill-(--sub)"
+              : "fill-[#ffc300] hover:fill-(--sub) cursor-pointer"
             }`}
         >
           <circle cx="622" cy="310" r="14.75" stroke="white" stroke-width="0.5">
