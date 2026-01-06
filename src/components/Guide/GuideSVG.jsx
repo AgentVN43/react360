@@ -1,8 +1,3 @@
-import React from "react";
-// import mouse_icon from "../../assets/icons/mouse_icon.png";
-// import hand_icon from "../../assets/icons/hand_icon.png";
-import { useDispatch, useSelector } from "react-redux";
-import { hideGuideSVG } from "../../redux/features/GuideSlice";
 
 const GuideSVG = ({ isGuideVisible }) => {
   return (

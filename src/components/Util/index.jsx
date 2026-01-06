@@ -42,10 +42,11 @@ const Util = ({
 
   return (
     <div
-      className={`w-full h-screen bg-[#faffee] ${selectedUtilFilter === 1 || selectedUtilFilter === 2
-        ? "overflow-auto"
-        : "overflow-hidden"
-        } md:overflow-auto`}
+      className={`w-full h-screen bg-[#faffee] ${
+        selectedUtilFilter === 1 || selectedUtilFilter === 2
+          ? "overflow-auto"
+          : "overflow-hidden"
+      } md:overflow-auto`}
     >
       {selectedUtilFilter === 1 || selectedUtilFilter === 2 ? (
         <></>
@@ -103,10 +104,11 @@ const Util = ({
                       key={index}
                       className={`flex justify-start items-center gap-2 text-center hover:cursor-pointer
                    w-full h-8 md:h-7 text-xs rounded-lg 
-                   ${item.isMedia
-                          ? "text-white bg-(--sub) hover:bg-(--primary) hover:text-(--sub)"
-                          : "bg-(--sub)/50 text-white"
-                        }
+                   ${
+                     item.isMedia
+                       ? "text-white bg-(--sub) hover:bg-(--primary) hover:text-(--sub)"
+                       : "bg-(--sub)/50 text-white"
+                   }
                    pl-2`}
                       onMouseEnter={() => setHoveredUtilItem(item.id)}
                       onMouseLeave={() => setHoveredUtilItem(null)}
@@ -171,7 +173,11 @@ const Util = ({
               <div className="w-full h-fit absolute bottom-5 space-y-2 md:space-y-0 md:bottom-2 left-1/2 -translate-x-1/2">
                 <div className="flex justify-center items-center w-full">
                   <div className="flex gap-2 items-center md:mb-1">
-                    <img src={line} alt="util_image" className="w-8 md:w-10" />
+                    <img
+                      src={`${line}`}
+                      alt="util_image"
+                      className="w-8 md:w-10"
+                    />
                     <span className="text-xs md:text-sm text-(--sub) text-nowrap">
                       Đường chạy bộ liên hoàn 1.000m
                     </span>

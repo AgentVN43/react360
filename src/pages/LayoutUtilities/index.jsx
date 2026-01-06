@@ -8,7 +8,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { updateResponsiveState } from "../../redux/features/ResponsiveSlice";
 // import PlanDetailsMobile from "../../components/PlanDetailsMobile";
 
-// import back_icon2 from "../../assets/icons/back_icon2.png";
+import back_icon2 from "../../assets/icons/back_icon2.png";
 // import next_icon from "../../assets/icons/next_icon.png";
 // import check from "../../assets/icons/check.png";
 // import circle_alert from "../../assets/icons/circle-alert_black.png";
@@ -21,8 +21,8 @@ import { updateResponsiveState } from "../../redux/features/ResponsiveSlice";
 // import laban from "../../assets/images/location/laban.png";
 // import dinhviBlock from "../../assets/images/plan/dinh_vi_block.png";
 
-// import SideTools from "../../components/SideTools";
-// import Util from "../../components/Util";
+import SideTools from "../../components/SideTools";
+import Util from "../../components/Util";
 import { useNavigate, useParams } from "react-router-dom";
 import ErrorPage from "../ErrorPage";
 import { showGuideSVG2 } from "../../redux/features/GuideSlice";
@@ -50,8 +50,9 @@ const LayoutUtilitiesFilter = ({
 
   return (
     <section
-      className={`${isVisibleMobileFilter ? "translate-x-0" : " -translate-x-full"
-        } transition-all duration-300 Navbar_wrapper fixed top-0 left-0 md:left-4 md:top-[425px] w-screen md:w-52 h-screen md:max-h-[550px] md:h-auto overflow-auto 
+      className={`${
+        isVisibleMobileFilter ? "translate-x-0" : " -translate-x-full"
+      } transition-all duration-300 Navbar_wrapper fixed top-0 left-0 md:left-4 md:top-[425px] w-screen md:w-52 h-screen md:max-h-[550px] md:h-auto overflow-auto 
          bg-white/60 backdrop-blur-md border border-white/10 shadow-lg 
           rounded-none md:rounded-md p-4 md:p-2 space-y-4 md:space-y-2 z-[80] md:z-40`}
     >
@@ -63,8 +64,9 @@ const LayoutUtilitiesFilter = ({
           <div className="grid grid-cols-2 gap-2">
             {/* hover:opacity-100 */}
             <div
-              className={`${activeFilterNumber === 75 ? "opacity-100" : "opacity-40"
-                } bg-[#FFC73C] py-2 rounded-lg text-white text-xs cursor-pointer hover:opacity-80 transition-all`}
+              className={`${
+                activeFilterNumber === 75 ? "opacity-100" : "opacity-40"
+              } bg-[#FFC73C] py-2 rounded-lg text-white text-xs cursor-pointer hover:opacity-80 transition-all`}
               onClick={() => {
                 setActiveFilterNumber(75);
                 setSelectedUtilFilter(0);
@@ -76,8 +78,9 @@ const LayoutUtilitiesFilter = ({
             </div>
             {/* hover:bg-[#ff7b6e] */}
             <div
-              className={`${activeFilterNumber === 45 ? "opacity-100" : "opacity-40"
-                } py-2 bg-[#ff7b6e] rounded-lg text-white text-xs cursor-pointer hover:opacity-80 transition-all`}
+              className={`${
+                activeFilterNumber === 45 ? "opacity-100" : "opacity-40"
+              } py-2 bg-[#ff7b6e] rounded-lg text-white text-xs cursor-pointer hover:opacity-80 transition-all`}
               onClick={() => {
                 setActiveFilterNumber(45);
                 setSelectedUtilFilter(0);
@@ -124,10 +127,11 @@ const LayoutUtilitiesFilter = ({
               section.itemsUtilFilter.map((item, indx) => (
                 <li
                   key={indx}
-                  className={`flex justify-center items-center text-center hover:cursor-pointer ${indx === selectedUtilFilter
-                    ? "bg-(--primary) text-(--sub) hover:bg-(--primary) hover:text-(--sub)"
-                    : "bg-(--sub) text-white hover:bg-(--primary) hover:text-(--sub)"
-                    } w-full h-8 md:h-7 text-xs rounded-lg`}
+                  className={`flex justify-center items-center text-center hover:cursor-pointer ${
+                    indx === selectedUtilFilter
+                      ? "bg-(--primary) text-(--sub) hover:bg-(--primary) hover:text-(--sub)"
+                      : "bg-(--sub) text-white hover:bg-(--primary) hover:text-(--sub)"
+                  } w-full h-8 md:h-7 text-xs rounded-lg`}
                   onClick={() => {
                     // if (item.img === null) return;
                     setSelectedUtilFilter(indx);
@@ -200,8 +204,8 @@ const LayoutUtilities = () => {
   const [activeFilterNumber, setActiveFilterNumber] = useState(
     matchedBlock ?? 75
   );
-  // const [activeFilterItemNumber, setActiveFilterItemNumber] = useState(1);
-  // const [isVisibleProductDetail, setisVisibleProductDetail] = useState(false);
+  const [activeFilterItemNumber, setActiveFilterItemNumber] = useState(1);
+  const [isVisibleProductDetail, setisVisibleProductDetail] = useState(false);
   const [isVisibleMobileFilter, setisVisibleMobileFilter] = useState(false);
   const [selectedUtilFilter, setSelectedUtilFilter] = useState(
     plan_filter
@@ -276,8 +280,9 @@ const LayoutUtilities = () => {
             <>
               {/* Mở/Tắt Filter */}
               <button
-                className={`w-10 h-10 ${!isVisibleMobileFilter ? "bg-(--sub)" : "bg-(--sub)/60"
-                  }  flex md:hidden justify-center items-center rounded-md`}
+                className={`w-10 h-10 ${
+                  !isVisibleMobileFilter ? "bg-(--sub)" : "bg-(--sub)/60"
+                }  flex md:hidden justify-center items-center rounded-md`}
                 onClick={() => toggleFilterVisible()}
               >
                 <svg

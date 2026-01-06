@@ -1,12 +1,11 @@
 import { useState } from "react";
-import PopUpImage from "../../components/PopUpImage";
-import layout_1pn_1wc from "../../assets/images/layout/1pn_1wc.png";
 import layout_1pn_1wc_2 from "../../assets/images/layout/1pn_1wc_2.png";
 import layout_2pn_1wc from "../../assets/images/layout/2pn_1wc.png";
 import layout_2pn_2wc from "../../assets/images/layout/2pn_2wc.png";
 import layout_2pn_2wc_2 from "../../assets/images/layout/2pn_2wc_2.png";
 import layout_3pn_2wc from "../../assets/images/layout/3pn_2wc.png";
 import layout_canhorisa from "../../assets/images/layout/canhorisa.jpg";
+import PopUpImage from "../../components/PopUpImage";
 import SideTools from "../../components/SideTools";
 
 const GalleryImgList = [
@@ -56,20 +55,20 @@ const LayoutHouse = () => {
               alt="gallery-img"
               loading="lazy"
             />
-            <p className="max-w-[90%] w-max group-hover:opacity-0 group-hover:-translate-x-5 translate-x-0 opacity-1 transition-all duration-300 absolute top-[80%] left-5 uppercase rounded-r-full font-semibold bg-(--sub)/80 py-2 px-4 before:border-2  before:border-white before:absolute before:left-0 before:h-full before:top-0">
-              <span className="bg-linear-to-r from-white via-white to-white bg-clip-text text-transparent text-xs md:text-sm font-bold">
+            <p className="max-w-[90%] w-max group-hover:opacity-0 group-hover:-translate-x-5 opacity-100 transition-all duration-300 absolute top-[80%] left-5 uppercase rounded-r-full font-semibold py-2 px-4 before:absolute before:left-0 before:top-0 before:h-full before:border-2 before:border-white bg-[color-mix(in_srgb,var(--sub)_80%,transparent)]">
+              <span className="text-xs md:text-sm font-bold text-transparent bg-gradient-to-r from-white via-white to-white bg-clip-text">
                 {item.title}
               </span>
             </p>
 
             {/* Hover Effect */}
-            <div className="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg">
-              <div className="flex flex-col justify-center items-center text-center px-8 gap-5">
-                <h4 className="uppercase font-bold text-2xl bg-linear-to-r from-white via-white to-white bg-clip-text text-transparent">
+            <div className="absolute inset-0 flex items-center justify-center rounded-lg bg-black/50 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+              <div className="flex flex-col items-center justify-center gap-5 px-8 text-center">
+                <h4 className="bg-gradient-to-r from-white via-white to-white bg-clip-text text-2xl font-bold uppercase text-transparent">
                   {item.title}
                 </h4>
                 <button
-                  className="p-1 px-4 rounded-full border-2 border-(--sub) text-white bg-linear-to-r from-(--sub) to-(--sub) hover:from-(--sub) hover:to-(--sub) shadow-xl hover:shadow-(--sub)/50 font-semibold"
+                  className="rounded-full border-2 border-[var(--sub)] bg-gradient-to-r from-[var(--sub)] to-[var(--sub)] px-4 p-1 font-semibold text-white shadow-xl hover:from-[var(--sub)] hover:to-[var(--sub)] hover:shadow-[0_0_20px_var(--sub)]"
                   onClick={() => handleSetActiveGalleryIndex(index)}
                 >
                   Xem thêm

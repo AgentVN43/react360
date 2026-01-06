@@ -1,6 +1,6 @@
 import React from "react";
-// import mouse_icon from "../../assets/icons/mouse_icon.png";
-// import hand_icon from "../../assets/icons/hand_icon.png";
+import mouse_icon from "../../assets/icons/mouse_icon.png";
+import hand_icon from "../../assets/icons/hand_icon.png";
 import { useDispatch, useSelector } from "react-redux";
 import { hideGuideSVG2 } from "../../redux/features/GuideSlice";
 
@@ -20,13 +20,13 @@ const GuideSVG2 = () => {
         <div className="flex w-full justify-center items-center gap-5">
           <img
             className="w-16 h-16 xl:w-20 xl:h-20 object-contain"
-            src="#"
+            src={hand_icon}
             alt="hand_icon"
           />
           <p className="text-white text-sm md:text-base">hoặc</p>
           <img
             className="w-16 h-16 xl:w-20 xl:h-20 object-contain"
-            src="#"
+            src={mouse_icon}
             alt="mouse_icon"
           />
         </div>

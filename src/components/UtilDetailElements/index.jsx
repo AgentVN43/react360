@@ -9,7 +9,7 @@ import zoominIcon from "../../assets/icons/zoomin.svg";
 import zoomoutIcon from "../../assets/icons/zoomout.svg";
 // import PopUpMedia from "../PopUpMedia";
 import UtilSlideShow from "../UtilSlideShow";
-import line from "../../assets/icons/line.svg";
+import line from "../../assets/icons/line.svg?url";
 import inout from "../../assets/icons/inout.svg";
 import updown from "../../assets/icons/updown.svg";
 import park from "../../assets/icons/park.svg";
