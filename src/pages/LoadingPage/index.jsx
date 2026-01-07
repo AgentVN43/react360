@@ -4,15 +4,13 @@ import "./LoadingPage.scss";
 //import loading_border from "../../assets/images/loading-border.png";
 import logo from "../../media/logo_2.png";
 
-const basePath = import.meta.env.VITE_BASE_PATH || "";
-
 const LoadingPage = () => {
   const navigate = useNavigate();
   let timer = 2000;
 
   useEffect(() => {
     const timerId = setTimeout(() => {
-      navigate(`${basePath}/toan-canh`);
+      navigate("/toan-canh");
     }, timer);
     return () => {
       clearTimeout(timerId);

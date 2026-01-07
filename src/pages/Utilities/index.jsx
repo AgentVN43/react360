@@ -28,7 +28,7 @@ const STOP_FRAMES_11_TYPE_PLAN_BUTTON = [1, 2, 3, 9, 4, 5, 6, 7];
 // const STOP_FRAMES_47_TYPE_PLAN_BUTTON = [2, 3, 4, 5, 7];
 // const STOP_FRAMES_74_TYPE_PLAN_BUTTON = [2, 3, 4, 5, 7];
 // const url = "https://360.goku.agency/goku-data/rotation_utils/";
-const url = "../../assets/images/rotation_utils/";
+// const url = "../../assets/images/rotation-utils/";
 
 const Rotation = ({
   setIframeData,
@@ -75,7 +75,7 @@ const Rotation = ({
     const loadImages = async () => {
       const imagePaths = Array.from(
         { length: TOTAL_FRAMES },
-        (_, i) => `/src/assets/images/rotation_utils/${i + 1}.jpg`
+        (_, i) => `/images/rotation-utils/${i + 1}.jpg`
       );
 
       const imagePromises = imagePaths.map((path) => {
@@ -1350,7 +1350,7 @@ const Rotation = ({
           <StopFramePlanComponent />
           <img
             className="car-image lg:scale-100 xl:scale-[1.0]"
-            src={`/src/assets/images/rotation_utils/${frameIndex}.jpg`}
+            src={`/images/rotation-utils/${frameIndex}.jpg`}
             alt="building"
           />
         </div>
@@ -1553,7 +1553,7 @@ const Utilities = () => {
       `}
       >
         <img
-          src={`/src/assets/images/rotation_utils/${currentFrameIndex}.jpg`}
+          src={`/images/rotation-utils/${currentFrameIndex}.jpg`}
           alt="background"
           className="w-full h-full object-cover absolute top-0 left-0 z-[-1] blur-sm"
         />

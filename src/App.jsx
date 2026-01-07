@@ -15,6 +15,23 @@ import Test from "./pages/Test";
 import FloorPlanEditor from "./pages/Test/FloorPlanEditor";
 import LayoutHouse from "./pages/LayoutHouse";
 import LayoutUtilities from "./pages/LayoutUtilities";
+import Verify from "./pages/Verify";
+
+// Extract path from VITE_BASE_PATH, removing protocol and domain if present
+const getBasePath = () => {
+  const basePath = import.meta.env.VITE_BASE_PATH || "/";
+  // If it's a full URL, extract just the path
+  if (basePath.startsWith("http://") || basePath.startsWith("https://")) {
+    try {
+      return new URL(basePath).pathname || "/";
+    } catch {
+      return "/";
+    }
+  }
+  return basePath;
+};
+
+const basename = getBasePath();
 
 export default function App() {
   const languageState = useSelector((state) => state.language);
@@ -25,18 +42,18 @@ export default function App() {
     <IntlProvider messages={messages} locale={locale}>
       <div>
         <Suspense fallback={<div>Loading...</div>}>
-          <BrowserRouter>
+          <BrowserRouter basename={basename}>
             {checkVerify ? (
               <Routes>
                 <Route path="/" element={<LoadingPage />} />
                 <Route element={<SharedLayout />}>
-                  <Route path="/toan-canh" element={<Overview />} />
+                  <Route path="toan-canh" element={<Overview />} />
                   <Route
                     path="mat-bang-tang/:block/:floor"
                     element={<FloorPlan />}
                   />
                   <Route
-                    path="/mat-bang-tien-ich/:block/:floor"
+                    path="mat-bang-tien-ich/:block/:floor"
                     element={<LayoutUtilities />}
                   />
                   <Route path="test" element={<Test />} />
